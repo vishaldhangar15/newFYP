@@ -27,7 +27,7 @@ import ComplaintSection from '../ComplaintSection/ComplaintSection';
 import SettingsSection from '../SettingsSection/SettingsSection';
 
 const Dashboard = () => {
-  const [student, setStudent] = useState();
+  const [student, setStudent] = useState('');
   const [active, setActive] = useState();
   const hadncleActive = (link) => {
     setActive(link);
@@ -39,6 +39,7 @@ const Dashboard = () => {
   };
 
   useEffect(() => {
+    setActive('Dashboard');
     getdata();
   }, []);
   console.log(active);

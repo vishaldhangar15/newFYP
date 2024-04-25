@@ -18,6 +18,10 @@ import {
 } from 'lucide-react';
 
 const SideNavBar = ({ hadncleActive, active }) => {
+  const current =
+    'flex h-9 w-9 items-center justify-center rounded-lg bg-accent active:User transition-colors hover:text-foreground md:h-8 md:w-8';
+  const notActive =
+    'flex h-9 w-9 items-center justify-center rounded-lg text-muted-foreground transition-colors hover:text-foreground md:h-8 md:w-8';
   return (
     <aside className="fixed inset-y-0 left-0 z-10 hidden w-14 flex-col border-r bg-background sm:flex">
       <nav className="flex flex-col items-center gap-4 px-2 sm:py-5">
@@ -33,7 +37,7 @@ const SideNavBar = ({ hadncleActive, active }) => {
             <TooltipTrigger asChild>
               <Link
                 href="#"
-                className="flex h-9 w-9 items-center justify-center rounded-lg text-muted-foreground transition-colors hover:text-foreground md:h-8 md:w-8"
+                className={active === 'Dashboard' ? current : notActive}
                 onClick={() => hadncleActive('Dashboard')}
               >
                 <Home className="h-5 w-5" />
@@ -49,7 +53,7 @@ const SideNavBar = ({ hadncleActive, active }) => {
             <TooltipTrigger asChild>
               <Link
                 href="#"
-                className="flex h-9 w-9 items-center justify-center rounded-lg bg-accent active:User transition-colors hover:text-foreground md:h-8 md:w-8"
+                className={active === 'Complaints' ? current : notActive}
                 onClick={() => hadncleActive('Complaints')}
               >
                 <MessageSquare className="h-5 w-5" />
@@ -65,7 +69,7 @@ const SideNavBar = ({ hadncleActive, active }) => {
             <TooltipTrigger asChild>
               <Link
                 href="#"
-                className="flex h-9 w-9 items-center justify-center rounded-lg text-muted-foreground transition-colors hover:text-foreground md:h-8 md:w-8"
+                className={active === 'Leave' ? current : notActive}
                 onClick={() => hadncleActive('Leave')}
               >
                 <AudioLines className="h-5 w-5" />
@@ -81,7 +85,7 @@ const SideNavBar = ({ hadncleActive, active }) => {
             <TooltipTrigger asChild>
               <Link
                 href="#"
-                className="flex h-9 w-9 items-center justify-center rounded-lg text-muted-foreground transition-colors hover:text-foreground md:h-8 md:w-8"
+                className={active === 'Profile' ? current : notActive}
                 onClick={() => hadncleActive('Profile')}
               >
                 <User className="h-5 w-5" />
@@ -98,7 +102,7 @@ const SideNavBar = ({ hadncleActive, active }) => {
             <TooltipTrigger asChild>
               <Link
                 href="#"
-                className="flex h-9 w-9 items-center justify-center rounded-lg text-muted-foreground transition-colors hover:text-foreground md:h-8 md:w-8"
+                className={active === 'Settings' ? current : notActive}
                 onClick={() => hadncleActive('Settings')}
               >
                 <Settings className="h-5 w-5" />
