@@ -41,7 +41,7 @@ const NavBar = () => {
     token();
   }, []);
 
-  console.log(accessToken, refreshToken);
+  // console.log(accessToken, refreshToken);
 
   const logoutHandler = async () => {
     setNavbar(!navbar);
@@ -102,9 +102,9 @@ const NavBar = () => {
                     >
                       {link.text}
                     </Link> */}
-                    <Button href={link.url} variant="link">
-                      {link.text}
-                    </Button>
+                    <Link href={link.url}>
+                      <Button variant="link">{link.text}</Button>
+                    </Link>
                   </li>
                 ))}
                 {refreshToken === undefined ? (

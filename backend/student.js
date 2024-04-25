@@ -58,8 +58,41 @@ const loginStudent = async (data) => {
   }
 };
 
+const getStudentData = async () => {
+  // post method to api/student/getdata
+  try {
+    const response = await fetch('/api/student/getdata', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+    });
+    const result = await response.json();
+    if (result.status === 200) {
+      return {
+        status: 200,
+        message: result.message,
+        success: true,
+        data: result.data,
+      };
+    }
+    return {
+      status: 400,
+      message: result.message,
+      success: false,
+    };
+  } catch (error) {
+    console.log(error.message);
+    return {
+      status: 400,
+      message: 'Something wen wrong while fetching data',
+      success: false,
+    };
+  }
+};
+
 const verifyStudentData = (data) => {
   console.log(data);
 };
 
-export { registerStudent, verifyStudentData, loginStudent };
+export { registerStudent, verifyStudentData, loginStudent, getStudentData };

@@ -14,6 +14,7 @@ export async function POST(request) {
       transactionId,
       phoneNo,
       parentPhoneNo,
+      yearOfStudy,
     } = data;
     if (
       !email ||
@@ -23,7 +24,8 @@ export async function POST(request) {
       !regNo ||
       !transactionId ||
       !phoneNo ||
-      !parentPhoneNo
+      !parentPhoneNo ||
+      !yearOfStudy
     ) {
       return NextResponse.json(
         { message: 'Please fill in all the fields' },
@@ -59,6 +61,7 @@ export async function POST(request) {
       email,
       firstName,
       lastName,
+      yearOfStudy,
       password: hashedPassword,
       regNo,
       transactionId,
