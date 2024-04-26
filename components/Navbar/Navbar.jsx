@@ -5,12 +5,10 @@ import Link from 'next/link';
 import { useState, useEffect } from 'react';
 import getTokens from '@/backend/getTokens';
 import { Button } from '../ui/button';
-import logout from '@/backend/logout';
-import toast from 'react-hot-toast';
-import { useRouter } from 'next/navigation';
+
+import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
 
 const NavBar = () => {
-  const router = useRouter();
   const [navbar, setNavbar] = useState(false);
   const [accessToken, setaccessToken] = useState();
   const [refreshToken, setrefreshToken] = useState();
@@ -43,29 +41,28 @@ const NavBar = () => {
 
   // console.log(accessToken, refreshToken);
 
-  const logoutHandler = async () => {
-    setNavbar(!navbar);
-    const res = await logout();
-    if (res.status === 200) {
-      toast.success(res.message);
-      router.push('/');
-    } else {
-      toast.error(res.message);
-    }
-  };
-
   return (
     <div className="Navbar relative">
       <nav className="fixed top-0 left-0 right-0 md:bg-[#0000001a] shadow-sm backdrop-blur-md z-10 p-4">
         <div className="justify-between px-4 mx-auto lg:max-w-7xl md:items-center md:flex md:px-8">
           <div>
-            <div className="flex items-center justify-between py-3 md:py-5 md:block">
+            <div className="flex items-center justify-between sm:pl-6 py-3 md:py-5 md:block">
               {/* LOGO */}
               <Link href="/">
                 <div className="text-2xl text-white font-bold ">Logo</div>
               </Link>
               {/* HAMBURGER BUTTON FOR MOBILE */}
               <div className="md:hidden">
+                {refreshToken && (
+                  <div
+                    className={` mr-2 inline-block ${navbar ? 'hidden' : ''}`}
+                  >
+                    <Avatar className="text-white h-6 w-6">
+                      <AvatarImage src="https://github.com/shadcn.png" />
+                      <AvatarFallback>CN</AvatarFallback>
+                    </Avatar>
+                  </div>
+                )}
                 <button
                   className="p-2 text-gray-700 rounded-md outline-none focus:border-gray-400 focus:border"
                   onClick={() => setNavbar(!navbar)}
@@ -75,9 +72,13 @@ const NavBar = () => {
                       <Cross1Icon className="text-white h-4 w-4 " />
                     </div>
                   ) : (
-                    <div>
-                      <HamburgerMenuIcon className="text-white h-4 w-4 " />
-                    </div>
+                    <>
+                      <div className="flex gap-4 ">
+                        <div className="f">
+                          <HamburgerMenuIcon className="text-white h-6 w-6 " />
+                        </div>
+                      </div>
+                    </>
                   )}
                 </button>
               </div>
@@ -107,45 +108,17 @@ const NavBar = () => {
                     </Link>
                   </li>
                 ))}
-                {refreshToken === undefined ? (
+                {refreshToken === undefined && (
                   <>
-                    <li className="md:text-white py-2 md:px-6 text-center border-b-2 md:border-b-0 border-purple-900 hover:underline md:hover:bg-transparent md:hidden ">
-                      {/* <Link
-                        className="no-underline font-semibold py-2 px-4 rounded-lg hover:bg-[#ffffff33] hover:shadow-md hover:backdrop-blur-md"
-                        href="/student/signup"
-                        onClick={() => setNavbar(!navbar)}
-                      >
-                        Studnet Login / Signup
-                      </Link> */}
-                      <Button
-                        onClick={() => setNavbar(!navbar)}
-                        variant="link"
-                        href="/student/signin"
-                      >
-                        Student Login/ Signup
-                      </Button>
+                    <li className="md:text-primary text-primary py-2 md:px-6 text-center border-b-2 md:border-b-0 border-purple-900 hover:underline  md:hidden ">
+                      <Link href="/student/signin">
+                        <Button variant="link"> Studnet Login / Signup </Button>
+                      </Link>
                     </li>
-                    <li className="md:text-white py-2 md:px-6 text-center border-b-2 md:border-b-0 border-purple-900 hover:underline md:hover:bg-transparent md:hidden ">
-                      {/* <Link
-                        className="no-underline font-semibold py-2 px-4 rounded-lg hover:bg-[#ffffff33] hover:shadow-md hover:backdrop-blur-md"
-                        href="#"
-                        onClick={() => setNavbar(!navbar)}
-                      >
-                        Admin Login
-                      </Link> */}
-                      <Button
-                        onClick={() => setNavbar(!navbar)}
-                        variant="link"
-                        href="#"
-                      >
-                        Admin Login
-                      </Button>
-                    </li>
-                  </>
-                ) : (
-                  <>
-                    <li className="md:text-white py-2 md:px-6 text-center border-b-2 md:border-b-0 border-purple-900 hover:underline md:hover:bg-transparent md:hidden ">
-                      <Button onClick={logoutHandler}>LogOut</Button>
+                    <li className="md:text-primary text-primary py-2 md:px-6 text-center border-b-2 md:border-b-0 border-purple-900 hover:underline md:hover:bg-transparent md:hidden ">
+                      <line>
+                        <Button variant="link"> Admin LogIn</Button>
+                      </line>
                     </li>
                   </>
                 )}
@@ -158,9 +131,18 @@ const NavBar = () => {
               <Dropdown />
             </div>
           ) : (
-            <Button onClick={logoutHandler} className="hidden md:block">
-              LogOut
-            </Button>
+            <div className=" gap-4 hidden  md:block  ">
+              <Link href="/student/dashboard">
+                <Avatar>
+                  <AvatarImage src="https://github.com/shadcn.png" />
+                  <AvatarFallback>CN</AvatarFallback>
+                </Avatar>
+              </Link>
+              {/*
+              <Button onClick={logoutHandler} className="hidden md:block">
+                LogOut
+              </Button> */}
+            </div>
           )}
         </div>
       </nav>
