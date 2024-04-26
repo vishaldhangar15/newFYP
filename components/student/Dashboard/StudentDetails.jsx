@@ -8,18 +8,16 @@ import {
   CardTitle,
 } from '@/components/ui/card';
 import { Progress } from '@/components/ui/progress';
-const StudentDetails = () => {
+const StudentDetails = ({ registrationNumber, yearOfStudy }) => {
   return (
     <div>
       <Card x-chunk="dashboard-05-chunk-1">
         <CardHeader className="pb-2">
-          <CardDescription>This Week</CardDescription>
-          <CardTitle className="text-4xl">$1,329</CardTitle>
+          <CardDescription>Registration Number</CardDescription>
+          <CardTitle className="text-4xl">{registrationNumber}</CardTitle>
         </CardHeader>
         <CardContent>
-          <div className="text-xs text-muted-foreground">
-            +25% from last week
-          </div>
+          <div className="text-xs text-muted-foreground">{yearOfStudy}</div>
         </CardContent>
         <CardFooter>
           <Progress value={25} aria-label="25% increase" />

@@ -8,18 +8,21 @@ import {
   CardTitle,
 } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
-const MiniProfile = () => {
+import { useContext } from 'react';
+const MiniProfile = ({ firstName, lastName, hadncleActive }) => {
+  // name is the combinaion of first name and last name
+  const Name = firstName + ' ' + lastName;
   return (
     <Card className="sm:col-span-2" x-chunk="dashboard-05-chunk-0">
       <CardHeader className="pb-3">
-        <CardTitle>Your Orders</CardTitle>
+        <CardTitle>{Name}</CardTitle>
         <CardDescription className="max-w-lg text-balance leading-relaxed">
           Introducing Our Dynamic Orders Dashboard for Seamless Management and
           Insightful Analysis.
         </CardDescription>
       </CardHeader>
       <CardFooter>
-        <Button>Create New Order</Button>
+        <Button onClick={() => hadncleActive('Profile')}>View Profile</Button>
       </CardFooter>
     </Card>
   );

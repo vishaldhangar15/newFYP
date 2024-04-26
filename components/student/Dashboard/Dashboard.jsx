@@ -1,6 +1,6 @@
 'use client';
 import MiniProfile from './MiniProfile';
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, createContext } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import {
@@ -13,6 +13,7 @@ import {
   Users2,
 } from 'lucide-react';
 import { Button } from '@/components/ui/button';
+import { ReloadIcon } from '@radix-ui/react-icons';
 
 import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet';
 
@@ -36,6 +37,7 @@ const Dashboard = () => {
   const getdata = async () => {
     const res = await getStudentData();
     // console.log(res);
+
     setStudent(res?.data);
   };
 
@@ -43,7 +45,9 @@ const Dashboard = () => {
     setActive('Dashboard');
     getdata();
   }, []);
+  // console.log(student);
   console.log(active);
+
   return (
     <div className="flex min-h-screen w-full flex-col bg-muted/40">
       {/* side navbar here */}
@@ -59,11 +63,31 @@ const Dashboard = () => {
           {/* BreadCrumb Here  */}
         </header>
         {/* main text area here  */}
-        {active == 'Dashboard' && <DashBoardLandingPage />}
-        {active == 'Profile' && <ProfileSection />}
-        {active == 'Leave' && <LeaveSection />}
-        {active == 'Complaints' && <ComplaintSection />}
-        {active == 'Settings' && <SettingsSection />}
+        {student !== null ? (
+          <React.Fragment>
+            {active === 'Dashboard' && (
+              <DashBoardLandingPage
+                active={active}
+                hadncleActive={hadncleActive}
+                student={student}
+              />
+            )}
+            {active === 'Profile' && <ProfileSection />}
+            {active === 'Leave' && <LeaveSection />}
+            {active === 'Complaints' && <ComplaintSection />}
+            {active === 'Settings' && <SettingsSection />}
+          </React.Fragment>
+        ) : (
+          <>
+            <div className="flex items-center justify-center h-screen w-full ">
+              <Button disabled>
+                <ReloadIcon className="mr-2 h-4 w-4 animate-spin" />
+                Please wait
+              </Button>
+            </div>
+          </>
+        )}
+
         {/* main text area here  */}
       </div>
     </div>
