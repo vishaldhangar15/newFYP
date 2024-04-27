@@ -46,10 +46,10 @@ const NavBar = () => {
       <nav className="fixed top-0 left-0 right-0 md:bg-[#0000001a] shadow-sm backdrop-blur-md z-10 p-4">
         <div className="justify-between px-4 mx-auto lg:max-w-7xl md:items-center md:flex md:px-8">
           <div>
-            <div className="flex items-center justify-between sm:pl-6 py-3 md:py-5 md:block">
+            <div className="flex items-center justify-between  py-3 md:py-5 md:block">
               {/* LOGO */}
               <Link href="/">
-                <div className="text-2xl text-white font-bold ">Logo</div>
+                <div className="text-2xl text-white font-bold ">Hosteller</div>
               </Link>
               {/* HAMBURGER BUTTON FOR MOBILE */}
               <div className="md:hidden">
