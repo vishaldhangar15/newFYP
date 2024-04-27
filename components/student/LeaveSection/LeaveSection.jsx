@@ -66,10 +66,6 @@ const LeaveSection = () => {
     } else {
       toast.error(res.message);
     }
-
-    startDate = new Date();
-    endDate = new Date();
-    setReason('');
   };
   return (
     <div className=" flex flex-col ">

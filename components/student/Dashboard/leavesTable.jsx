@@ -68,14 +68,12 @@ const LeaveTable = ({ leaves }) => {
       </TableHeader>
       {leaves && (
         <TableBody>
-          {leaves.map((invoice) => (
-            <TableRow key={invoice.invoice}>
-              <TableCell className="font-medium">{invoice.invoice}</TableCell>
-              <TableCell>{invoice.paymentStatus}</TableCell>
-              <TableCell>{invoice.paymentMethod}</TableCell>
-              <TableCell className="text-right">
-                {invoice.totalAmount}
-              </TableCell>
+          {leaves.map((leave, index) => (
+            <TableRow key={index}>
+              <TableCell className="font-medium">{index + 1}</TableCell>
+              <TableCell>{leave.from}</TableCell>
+              <TableCell>{leave.to}</TableCell>
+              <TableCell className="text-right">Yet to calculate</TableCell>
             </TableRow>
           ))}
         </TableBody>
