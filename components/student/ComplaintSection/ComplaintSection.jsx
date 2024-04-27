@@ -18,8 +18,50 @@ import {
   SelectValue,
 } from '@/components/ui/select';
 import { Textarea } from '@/components/ui/textarea';
+import { useState } from 'react';
+import toast from 'react-hot-toast';
+import { addComplaint } from '@/backend/student';
 
 const ComplaintSection = () => {
+  const [complaintTitle, setComplaintTitle] = useState('');
+  const [complaintDescription, setComplaintDescription] = useState('');
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    // Do something with the collected data, e.g., send it to a server
+    const formData = {
+      title: complaintTitle,
+      description: complaintDescription,
+    };
+    console.log(formData); // For demonstration, log the collected data
+    if (complaintTitle === '' || complaintDescription === '') {
+      toast.error('Please fill all the fields');
+      return;
+    }
+    // setting complaint title lenght to be 5
+    if (complaintTitle.length < 5) {
+      toast.error('Complaint title should be atleast 5 characters');
+      return;
+    }
+    // description length ot be 10
+    if (complaintDescription.length < 10) {
+      toast.error('Complaint description should be atleast 10 characters');
+      return;
+    }
+
+    const res = await addComplaint(formData);
+    // console.log(res)
+
+    if (res.status === 200) {
+      toast.success(res.message);
+    } else {
+      toast.error(res.message);
+    }
+    // Reset form fields
+    setComplaintTitle('');
+    setComplaintDescription('');
+  };
+
   return (
     <div className=" flex flex-col ">
       <div className={cn('text-center font-extrabold  text-5xl  m-10')}>
@@ -37,17 +79,26 @@ const ComplaintSection = () => {
                 <div className="grid w-full items-center gap-4">
                   <div className="flex flex-col space-y-1.5">
                     <Label htmlFor="name">Complaint Title</Label>
-                    <Input id="name" placeholder="Name of your project" />
+                    <Input
+                      value={complaintTitle}
+                      onChange={(e) => setComplaintTitle(e.target.value)}
+                      id="name"
+                      placeholder="Name of your project"
+                    />
                   </div>
                   <div className="flex flex-col space-y-1.5">
                     <label>Complaint Description</label>
-                    <Textarea placeholder="Type your message here." />
+                    <Textarea
+                      alue={complaintDescription}
+                      onChange={(e) => setComplaintDescription(e.target.value)}
+                      placeholder="Type your message here."
+                    />
                   </div>
                 </div>
               </form>
             </CardContent>
             <CardFooter className="flex justify-between">
-              <Button>Deploy</Button>
+              <Button onClick={handleSubmit}>Submmit</Button>
             </CardFooter>
           </Card>
         </div>

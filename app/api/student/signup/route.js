@@ -62,13 +62,14 @@ export async function POST(request) {
       firstName,
       lastName,
       yearOfStudy,
+      RoomNo: undefined,
       password: hashedPassword,
       regNo,
       transactionId,
       phoneNo,
       parentPhoneNo,
       isVerified: false,
-      compalints: [],
+      complaints: [],
       leaves: [],
     };
 

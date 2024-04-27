@@ -95,4 +95,37 @@ const verifyStudentData = (data) => {
   console.log(data);
 };
 
-export { registerStudent, verifyStudentData, loginStudent, getStudentData };
+const addComplaint = async (data) => {
+  //making post request to api/students/addComplaint
+  try {
+    const response = await fetch('/api/student/addComplaint', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(data),
+    });
+    const result = await response.json();
+    console.log(result);
+    if (result.status === 200) {
+      return {
+        status: 200,
+        message: result.message,
+        success: true,
+      };
+    }
+    return {
+      status: 400,
+      message: result.message,
+      success: false,
+    };
+  } catch (error) {}
+};
+
+export {
+  registerStudent,
+  verifyStudentData,
+  loginStudent,
+  getStudentData,
+  addComplaint,
+};

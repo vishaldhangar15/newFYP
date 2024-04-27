@@ -55,6 +55,7 @@ const invoices = [
 ];
 
 const ComplaintTable = ({ Complaints }) => {
+  console.log(Complaints);
   return (
     <Table>
       {Complaints ? (
@@ -72,13 +73,13 @@ const ComplaintTable = ({ Complaints }) => {
       </TableHeader>
       {Complaints && (
         <TableBody>
-          {invoices.map((invoice) => (
-            <TableRow key={invoice.invoice}>
-              <TableCell className="font-medium">{invoice.invoice}</TableCell>
-              <TableCell>{invoice.paymentStatus}</TableCell>
-              <TableCell>{invoice.paymentMethod}</TableCell>
+          {Complaints.map((complaint, index) => (
+            <TableRow key={index}>
+              <TableCell className="font-medium">{index + 1}</TableCell>
+              <TableCell>{complaint.status}</TableCell>
+              <TableCell>{complaint.title}</TableCell>
               <TableCell className="text-right">
-                {invoice.totalAmount}
+                {complaint.description}
               </TableCell>
             </TableRow>
           ))}

@@ -1,17 +1,7 @@
 'use client';
 import MiniProfile from './MiniProfile';
 import React, { useEffect, useState, createContext } from 'react';
-import Image from 'next/image';
-import Link from 'next/link';
-import {
-  // Home,
-  LineChart,
-  Package,
-  Package2,
-  PanelLeft,
-  ShoppingCart,
-  Users2,
-} from 'lucide-react';
+import usePageRefreshEffect from '@/public/customRefreshHook';
 import { Button } from '@/components/ui/button';
 import { ReloadIcon } from '@radix-ui/react-icons';
 
@@ -46,7 +36,7 @@ const Dashboard = () => {
     getdata();
   }, []);
   // console.log(student);
-  console.log(active);
+  // console.log(active);
 
   return (
     <div className="flex min-h-screen w-full flex-col bg-muted/40">
