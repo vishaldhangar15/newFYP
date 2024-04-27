@@ -40,7 +40,7 @@ const LogOutSection = () => {
     <Card x-chunk="dashboard-04-chunk-1">
       <CardHeader className="">
         {/* <CardTitle>Store Name</CardTitle> */}
-        <CardDescription className="text-white">
+        <CardDescription className="text-foreground">
           Log Out from the Application{' '}
         </CardDescription>
       </CardHeader>

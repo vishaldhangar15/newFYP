@@ -37,7 +37,9 @@ const SignUp = () => {
   return (
     <Card className="mx-auto mt-16  max-w-sm  md:max-w-lg">
       <CardHeader>
-        <CardTitle className="text-xl">Sign Up</CardTitle>
+        <CardTitle className="text-xl text-primary font-bold ">
+          Sign Up
+        </CardTitle>
         <CardDescription>
           Enter your information to create an account
         </CardDescription>

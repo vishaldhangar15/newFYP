@@ -5,9 +5,8 @@ import Link from 'next/link';
 import { useState, useEffect } from 'react';
 import getTokens from '@/backend/getTokens';
 import { Button } from '../ui/button';
-
 import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
-
+import Togglebtn from '../ToggleBtn/Togglebtn';
 const NavBar = () => {
   const [navbar, setNavbar] = useState(false);
   const [accessToken, setaccessToken] = useState();
@@ -42,17 +41,20 @@ const NavBar = () => {
   // console.log(accessToken, refreshToken);
 
   return (
-    <div className="Navbar relative">
+    <div className="Navbar relative ">
       <nav className="fixed top-0 left-0 right-0 md:bg-[#0000001a] shadow-sm backdrop-blur-md z-10 p-4">
         <div className="justify-between px-4 mx-auto lg:max-w-7xl md:items-center md:flex md:px-8">
           <div>
-            <div className="flex items-center justify-between  py-3 md:py-5 md:block">
+            <div className="flex items-center justify-between   md:block">
               {/* LOGO */}
               <Link href="/">
-                <div className="text-2xl text-white font-bold ">Hosteller</div>
+                <div className="text-2xl text-foreground font-bold ">
+                  Hosteller
+                </div>
               </Link>
               {/* HAMBURGER BUTTON FOR MOBILE */}
-              <div className="md:hidden">
+              <div className="md:hidden flex gap-2 justify-center items-center">
+                <Togglebtn />
                 {refreshToken && (
                   <div
                     className={` mr-2 inline-block ${navbar ? 'hidden' : ''}`}
@@ -94,7 +96,7 @@ const NavBar = () => {
                 {navLinks.map((link) => (
                   <li
                     key={link.id}
-                    className="md:text-white py-2 md:px-6 text-center border-b-2 md:border-b-0 border-purple-900 hover:underline md:hover:bg-transparent"
+                    className="md:text-foreground   md:px-6 text-center border-b-2 md:border-b-0 border-purple-900 hover:underline md:hover:bg-transparent"
                   >
                     {/* <Link
                       className="no-underline font-semibold py-2 px-4 rounded-lg hover:bg-[#ffffff33] hover:shadow-md hover:backdrop-blur-md"
@@ -127,11 +129,14 @@ const NavBar = () => {
           </div>
 
           {refreshToken == undefined ? (
-            <div className="hidden md:block">
+            <div className="hidden md:flex gap-2">
+              <Togglebtn />
               <Dropdown />
             </div>
           ) : (
-            <div className=" gap-4 hidden  md:block  ">
+            <div className=" gap-4 hidden  md:flex   ">
+              <Togglebtn />
+
               <Link href="/student/dashboard">
                 <Avatar>
                   <AvatarImage src="https://github.com/shadcn.png" />

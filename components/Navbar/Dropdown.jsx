@@ -12,7 +12,7 @@ const Dropdown = () => {
   return (
     <div>
       <DropdownMenu>
-        <DropdownMenuTrigger className="text-white px-4 py-2 ">
+        <DropdownMenuTrigger className="text-foreground px-4 py-2 ">
           Get In
         </DropdownMenuTrigger>
         <DropdownMenuContent>
