@@ -122,10 +122,44 @@ const addComplaint = async (data) => {
   } catch (error) {}
 };
 
+const addLeavs = async (data) => {
+  try {
+    // making post request to api/students/addLeave
+    const response = await fetch('/api/student/addLeave', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(data),
+    });
+    const result = await response.json();
+    // console.log(result);
+    if (result.status === 200) {
+      return {
+        status: 200,
+        message: result.message,
+        success: true,
+      };
+    }
+    return {
+      status: 400,
+      message: result.message,
+      success: false,
+    };
+  } catch (error) {
+    return {
+      status: 400,
+      message: 'Something wen wrong while adding leave',
+      success: false,
+    };
+  }
+};
+
 export {
   registerStudent,
   verifyStudentData,
   loginStudent,
   getStudentData,
   addComplaint,
+  addLeavs,
 };

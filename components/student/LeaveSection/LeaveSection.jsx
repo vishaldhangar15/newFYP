@@ -10,13 +10,6 @@ import {
 import { useState } from 'react';
 import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
-import {
-  Select,
-  SelectContent,
-  SelectItem,
-  SelectTrigger,
-  SelectValue,
-} from '@/components/ui/select';
 import { CalendarIcon } from '@radix-ui/react-icons';
 import { format } from 'date-fns';
 
@@ -28,11 +21,56 @@ import {
   PopoverTrigger,
 } from '@/components/ui/popover';
 import { Textarea } from '@/components/ui/textarea';
+import toast from 'react-hot-toast';
+import { addLeavs } from '@/backend/student';
 
 const LeaveSection = () => {
   const [startDate, setStartDate] = useState(new Date());
   const [endDate, setEndDate] = useState(new Date());
-  console.log(startDate, endDate);
+  const [reason, setReason] = useState('');
+  const nextYearDate = new Date();
+  nextYearDate.setFullYear(startDate.getFullYear() + 1);
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+
+    // console.log(startDate.getDate(), endDate.getDate(), reason);
+    const leave = {
+      from: format(startDate, 'dd-MM-yyyy'),
+      to: format(endDate, 'dd-MM-yyyy'),
+      reason: reason,
+    };
+
+    console.log(leave);
+    // check if start date is greater than todays data
+    if (
+      startDate.getDate() <= new Date().getDate() &&
+      startDate.getMonth() <= new Date().getMonth() &&
+      startDate.getFullYear() <= new Date().getFullYear()
+    ) {
+      toast.error('Start data cannot be less than today!');
+      return;
+    }
+    if (
+      endDate.getDate() < startDate.getDate() &&
+      endDate.getMonth() <= startDate.getMonth() &&
+      endDate.getFullYear() <= startDate.getFullYear()
+    ) {
+      toast.error('End date cannot be less than start date!');
+      return;
+    }
+
+    const res = await addLeavs(leave);
+
+    if (res.status === 200) {
+      toast.success(res.message);
+    } else {
+      toast.error(res.message);
+    }
+
+    startDate = new Date();
+    endDate = new Date();
+    setReason('');
+  };
   return (
     <div className=" flex flex-col ">
       <div className={cn('text-center font-extrabold  text-5xl  m-10')}>
@@ -71,6 +109,9 @@ const LeaveSection = () => {
                         <Calendar
                           mode="single"
                           selected={startDate}
+                          disabled={(date) =>
+                            date <= new Date() || date > nextYearDate
+                          }
                           onSelect={setStartDate}
                           initialFocus
                         />
@@ -102,6 +143,9 @@ const LeaveSection = () => {
                         <Calendar
                           mode="single"
                           selected={endDate}
+                          disabled={(date) =>
+                            date <= new Date() || date > nextYearDate
+                          }
                           onSelect={setEndDate}
                           initialFocus
                         />
@@ -111,13 +155,16 @@ const LeaveSection = () => {
                   </div>
                   <div>
                     <label>Reason (optional)</label>
-                    <Textarea></Textarea>
+                    <Textarea
+                      value={reason}
+                      onChange={(e) => setReason(e.target.value)}
+                    ></Textarea>
                   </div>
                 </div>
               </form>
             </CardContent>
             <CardFooter className="flex justify-between">
-              <Button>Deploy</Button>
+              <Button onClick={handleSubmit}>Submit</Button>
             </CardFooter>
           </Card>
         </div>
