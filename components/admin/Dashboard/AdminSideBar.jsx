@@ -13,8 +13,17 @@ import {
   Settings,
   ShoppingCart,
   Users2,
+  NotebookPen,
+  calenderch,
+  MessageSquare,
+  CalendarCheck,
 } from 'lucide-react';
-const AdminSideBar = () => {
+const AdminSideBar = ({ hadncleActive, active }) => {
+  const activeLink =
+    'flex h-9 w-9 items-center justify-center rounded-lg bg-accent text-accent-foreground transition-colors hover:text-foreground md:h-8 md:w-8';
+  const notActiveLink =
+    'flex h-9 w-9 items-center justify-center rounded-lg text-muted-foreground transition-colors hover:text-foreground md:h-8 md:w-8';
+
   return (
     <aside className="fixed inset-y-0 left-0 z-10 hidden w-14 flex-col border-r bg-background sm:flex">
       <nav className="flex flex-col items-center gap-4 px-2 sm:py-5">
@@ -25,12 +34,14 @@ const AdminSideBar = () => {
           <Package2 className="h-4 w-4 transition-all group-hover:scale-110" />
           <span className="sr-only">Acme Inc</span>
         </Link>
+
         <TooltipProvider>
           <Tooltip>
             <TooltipTrigger asChild>
               <Link
                 href="#"
-                className="flex h-9 w-9 items-center justify-center rounded-lg text-muted-foreground transition-colors hover:text-foreground md:h-8 md:w-8"
+                className={active === 'Dashboard' ? activeLink : notActiveLink}
+                onClick={() => hadncleActive('Dashboard')}
               >
                 <Home className="h-5 w-5" />
                 <span className="sr-only">Dashboard</span>
@@ -44,13 +55,16 @@ const AdminSideBar = () => {
             <TooltipTrigger asChild>
               <Link
                 href="#"
-                className="flex h-9 w-9 items-center justify-center rounded-lg bg-accent text-accent-foreground transition-colors hover:text-foreground md:h-8 md:w-8"
+                className={
+                  active === 'AdmitStudent' ? activeLink : notActiveLink
+                }
+                onClick={() => hadncleActive('AdmitStudent')}
               >
-                <ShoppingCart className="h-5 w-5" />
-                <span className="sr-only">Orders</span>
+                <NotebookPen className="h-5 w-5" />
+                <span className="sr-only">Admit Student</span>
               </Link>
             </TooltipTrigger>
-            <TooltipContent side="right">Orders</TooltipContent>
+            <TooltipContent side="right">Admit Student</TooltipContent>
           </Tooltip>
         </TooltipProvider>
         <TooltipProvider>
@@ -58,13 +72,14 @@ const AdminSideBar = () => {
             <TooltipTrigger asChild>
               <Link
                 href="#"
-                className="flex h-9 w-9 items-center justify-center rounded-lg text-muted-foreground transition-colors hover:text-foreground md:h-8 md:w-8"
+                className={active === 'Complaints' ? activeLink : notActiveLink}
+                onClick={() => hadncleActive('Complaints')}
               >
-                <Package className="h-5 w-5" />
-                <span className="sr-only">Products</span>
+                <MessageSquare className="h-5 w-5" />
+                <span className="sr-only">Complaints</span>
               </Link>
             </TooltipTrigger>
-            <TooltipContent side="right">Products</TooltipContent>
+            <TooltipContent side="right">Complaints</TooltipContent>
           </Tooltip>
         </TooltipProvider>
         <TooltipProvider>
@@ -72,27 +87,14 @@ const AdminSideBar = () => {
             <TooltipTrigger asChild>
               <Link
                 href="#"
-                className="flex h-9 w-9 items-center justify-center rounded-lg text-muted-foreground transition-colors hover:text-foreground md:h-8 md:w-8"
+                className={active === 'AddEvent' ? activeLink : notActiveLink}
+                onClick={() => hadncleActive('AddEvent')}
               >
-                <Users2 className="h-5 w-5" />
-                <span className="sr-only">Customers</span>
+                <CalendarCheck className="h-5 w-5" />
+                <span className="sr-only">Add Event </span>
               </Link>
             </TooltipTrigger>
-            <TooltipContent side="right">Customers</TooltipContent>
-          </Tooltip>
-        </TooltipProvider>
-        <TooltipProvider>
-          <Tooltip>
-            <TooltipTrigger asChild>
-              <Link
-                href="#"
-                className="flex h-9 w-9 items-center justify-center rounded-lg text-muted-foreground transition-colors hover:text-foreground md:h-8 md:w-8"
-              >
-                <LineChart className="h-5 w-5" />
-                <span className="sr-only">Analytics</span>
-              </Link>
-            </TooltipTrigger>
-            <TooltipContent side="right">Analytics</TooltipContent>
+            <TooltipContent side="right">Add Event</TooltipContent>
           </Tooltip>
         </TooltipProvider>
       </nav>
@@ -102,7 +104,8 @@ const AdminSideBar = () => {
             <TooltipTrigger asChild>
               <Link
                 href="#"
-                className="flex h-9 w-9 items-center justify-center rounded-lg text-muted-foreground transition-colors hover:text-foreground md:h-8 md:w-8"
+                className={active === 'Settings' ? activeLink : notActiveLink}
+                onClick={() => hadncleActive('Settings')}
               >
                 <Settings className="h-5 w-5" />
                 <span className="sr-only">Settings</span>

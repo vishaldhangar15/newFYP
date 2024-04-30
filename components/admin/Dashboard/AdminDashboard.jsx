@@ -1,3 +1,4 @@
+'use client';
 import AdminSideBar from './AdminSideBar';
 import AdminMiniProfile from './AdminMiniProfile';
 import AdminMobileNavBar from './AdinMobileNavBar';
@@ -6,12 +7,21 @@ import AdminBreadCrumb from './AdminBreadCrumb';
 import AdminRoomNo from './AdminRoomNo';
 import AdminComplaintTable from './AdminComplaintTable';
 import AdminLeveTable from './AdminLeveTable';
-
+import AdminDashboardLandingPage from './AdminDashboardLandingPage';
+import AdminComplaintSection from '../complaintSection/AdminComplaintSection';
+import AdmitStudent from '../AdmitStudent/AdmitStudent';
+import AddEvent from '../AddEvent/AddEvent';
+import AdminSettings from '../AdminSettings/AdminSettings';
+import { useState } from 'react';
 const AdminDashboard = () => {
+  const [active, setActive] = useState('Dashboard');
+  const hadncleActive = (link) => {
+    setActive(link);
+  };
   return (
     <div className="flex mt-16 min-h-screen w-full flex-col bg-muted/40">
       {/* navbar here       */}
-      <AdminSideBar />
+      <AdminSideBar hadncleActive={hadncleActive} active={active} />
       {/* navbar here       */}
 
       <div className="flex flex-col sm:gap-4 sm:py-4 sm:pl-14">
@@ -23,24 +33,12 @@ const AdminDashboard = () => {
           <AdminBreadCrumb />
           {/* admin breadcrumb here  */}
         </header>
-        <main className="grid flex-1 items-start gap-4 p-4 sm:px-6 sm:py-0 md:gap-8 lg:grid-cols-3 xl:grid-cols-3">
-          <div className="grid auto-rows-max items-start gap-4 md:gap-8 lg:col-span-2">
-            <div className="grid gap-4 sm:grid-cols-2 md:grid-cols-4 lg:grid-cols-2 xl:grid-cols-4">
-              {/* admin miniprofile  */}
-              <AdminMiniProfile />
-              {/* admin details here  */}
-              <AdminDetails />
-              {/* admin roomNo here */}
-              <AdminRoomNo />
-            </div>
-            {/* admin complant table  */}
-            <AdminComplaintTable />
-          </div>
-          <div>
-            {/* admin leave table  */}
-            <AdminLeveTable />
-          </div>
-        </main>
+        {/* maint content area here  */}
+        {active === 'Dashboard' && <AdminDashboardLandingPage />}
+        {active === 'Complaints' && <AdminComplaintSection />}
+        {active === 'AdmitStudent' && <AdmitStudent />}
+        {active === 'AddEvent' && <AddEvent />}
+        {active === 'Settings' && <AdminSettings />}
       </div>
     </div>
   );
