@@ -118,9 +118,9 @@ const NavBar = () => {
                       </Link>
                     </li>
                     <li className="md:text-primary text-primary py-2 md:px-6 text-center border-b-2 md:border-b-0 border-purple-900 hover:underline md:hover:bg-transparent md:hidden ">
-                      <line>
+                      <Link href="/admin/signin">
                         <Button variant="link"> Admin LogIn</Button>
-                      </line>
+                      </Link>
                     </li>
                   </>
                 )}

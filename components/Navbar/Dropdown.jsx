@@ -21,7 +21,9 @@ const Dropdown = () => {
           <Link href="/student/signin">
             <DropdownMenuItem>Student Login/Signup</DropdownMenuItem>
           </Link>
-          <DropdownMenuItem>Admin Login</DropdownMenuItem>
+          <Link href="/admin/signin">
+            <DropdownMenuItem>Admin Login</DropdownMenuItem>
+          </Link>
         </DropdownMenuContent>
       </DropdownMenu>
     </div>
