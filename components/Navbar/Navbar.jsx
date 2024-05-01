@@ -7,6 +7,7 @@ import getTokens from '@/backend/getTokens';
 import { Button } from '../ui/button';
 import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
 import Togglebtn from '../ToggleBtn/Togglebtn';
+import FacillitiesNavigationMenu from './FacillitiesNavigationMenu';
 const NavBar = () => {
   const [navbar, setNavbar] = useState(false);
   const [accessToken, setaccessToken] = useState();
@@ -22,11 +23,11 @@ const NavBar = () => {
       text: 'About',
       url: '/#about',
     },
-    {
-      id: 3,
-      text: 'Facillities',
-      url: '/#facillities',
-    },
+    // {
+    //   id: 3,
+    //   text: 'Facillities',
+    //   url: '/#facillities',
+    // },
   ];
   // getting tokens
   const token = async () => {
@@ -110,6 +111,7 @@ const NavBar = () => {
                     </Link>
                   </li>
                 ))}
+                <FacillitiesNavigationMenu />
                 {refreshToken === undefined && (
                   <>
                     <li className="md:text-primary text-primary py-2 md:px-6 text-center border-b-2 md:border-b-0 border-purple-900 hover:underline  md:hidden ">
