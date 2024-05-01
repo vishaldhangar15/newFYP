@@ -11,7 +11,37 @@ import {
 } from '@/components/ui/alert-dialog';
 import { CircleX } from 'lucide-react';
 import { Button } from '@/components/ui/button';
-const DeleteStudentDialog = () => {
+import { deleteStudent } from '@/backend/admin';
+import toast from 'react-hot-toast';
+const DeleteStudentDialog = ({
+  id,
+  registeredStudents,
+  setRegisteredStudents,
+}) => {
+  const handleSubmit = async () => {
+    const data = {
+      id: id,
+    };
+    const res = await deleteStudent(data);
+    if (res.status === 200) {
+      toast.success(res.message);
+      // delete the student from the list
+      console.log('before deletion');
+      console.log(registeredStudents);
+      if (registeredStudents) {
+        const newList = registeredStudents.filter(
+          (student) => student._id !== id
+        );
+        console.log('after deletion');
+        console.log(newList);
+
+        setRegisteredStudents(newList);
+      }
+      toast.success(res.message);
+    } else {
+      toast.error(res.message);
+    }
+  };
   return (
     <AlertDialog>
       <AlertDialogTrigger asChild>
@@ -21,15 +51,14 @@ const DeleteStudentDialog = () => {
       </AlertDialogTrigger>
       <AlertDialogContent>
         <AlertDialogHeader>
-          <AlertDialogTitle>Are you absolutely sure?</AlertDialogTitle>
+          <AlertDialogTitle>Delete the Student?</AlertDialogTitle>
           <AlertDialogDescription>
-            This action cannot be undone. This will permanently delete your
-            account and remove your data from our servers.
+            The student will be permenently deleted.
           </AlertDialogDescription>
         </AlertDialogHeader>
         <AlertDialogFooter>
           <AlertDialogCancel>Cancel</AlertDialogCancel>
-          <AlertDialogAction>Continue</AlertDialogAction>
+          <AlertDialogAction onClick={handleSubmit}>Delete</AlertDialogAction>
         </AlertDialogFooter>
       </AlertDialogContent>
     </AlertDialog>

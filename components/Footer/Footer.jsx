@@ -1,4 +1,5 @@
 import React from 'react';
+import Link from 'next/link';
 
 function Footer() {
   return (
@@ -27,7 +28,6 @@ function Footer() {
             Air plant banjo lyft occupy retro adaptogen indego
           </p>
         </div>
-        {/* Navigation Links */}
         <div className="flex-grow flex flex-wrap md:pr-20 -mb-10 md:text-left text-center order-first">
           {/* Categories */}
           <div className="lg:w-1/4 md:w-1/2 w-full px-4">
@@ -36,19 +36,22 @@ function Footer() {
             </h2>
             <nav className="list-none mb-10">
               <li>
-                <a href="#" className="text-gray-400 hover:text-white">
-                  First Link
-                </a>
+                <Link
+                  href="/gallery"
+                  className="text-gray-400 hover:text-white"
+                >
+                  Gallery
+                </Link>
               </li>
               <li>
-                <a href="#" className="text-gray-400 hover:text-white">
+                <Link href="#" className="text-gray-400 hover:text-white">
                   Second Link
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="#" className="text-gray-400 hover:text-white">
+                <Link href="#" className="text-gray-400 hover:text-white">
                   Third Link
-                </a>
+                </Link>
               </li>
               <li>
                 <a href="#" className="text-gray-400 hover:text-white">

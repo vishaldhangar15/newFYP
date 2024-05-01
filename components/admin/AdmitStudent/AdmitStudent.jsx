@@ -25,42 +25,48 @@ const AdmitStudent = () => {
 
   useEffect(() => {
     getStudentsData();
-  }, []);
-
+  }, [registeredStudents]);
+  console.log(registeredStudents);
   return (
     <div>
       <div className=" text-2xl md:text-3xl text-foreground font-extrabold text-center ">
         Newly Reisterred Students
       </div>
       <div className="md:px-16">
-        <Table>
-          <TableCaption>A list of your recent invoices.</TableCaption>
-          <TableHeader>
-            <TableRow>
-              <TableHead className="w-[100px]">Sr. No.</TableHead>
-              <TableHead>Method</TableHead>
-              <TableHead className="text-right">Verify</TableHead>
-            </TableRow>
-          </TableHeader>
-          {registeredStudents && (
-            <TableBody>
-              {registeredStudents.map((obj, index) => (
-                <TableRow key={index}>
-                  <TableCell className="font-medium">{index + 1}</TableCell>
-                  <TableCell>{`${obj.firstName} ${obj.lastName}`}</TableCell>
-                  <TableCell className="flex justify-end gap-4 ">
-                    <AdmitStudentDialog
-                      id={obj._id}
-                      registeredStudents={registeredStudents}
-                      setRegisteredStudents={setRegisteredStudents}
-                    />
-                    <DeleteStudentDialog />
-                  </TableCell>
-                </TableRow>
-              ))}
-            </TableBody>
-          )}
-        </Table>
+        {registeredStudents.length > 0 ? (
+          <Table>
+            <TableCaption>A list of your recent invoices.</TableCaption>
+            <TableHeader>
+              <TableRow>
+                <TableHead className="w-[100px]">Sr. No.</TableHead>
+                <TableHead>Method</TableHead>
+                <TableHead className="text-right">Verify</TableHead>
+              </TableRow>
+            </TableHeader>
+            {registeredStudents && (
+              <TableBody>
+                {registeredStudents.map((obj, index) => (
+                  <TableRow key={index}>
+                    <TableCell className="font-medium">{index + 1}</TableCell>
+                    <TableCell>{`${obj.firstName} ${obj.lastName}`}</TableCell>
+                    <TableCell className="flex justify-end gap-4 ">
+                      <AdmitStudentDialog
+                        id={obj._id}
+                        registeredStudents={registeredStudents}
+                        setRegisteredStudents={setRegisteredStudents}
+                      />
+                      <DeleteStudentDialog id={obj._id} />
+                    </TableCell>
+                  </TableRow>
+                ))}
+              </TableBody>
+            )}
+          </Table>
+        ) : (
+          <div className="text-center text-foreground font-bold mt-10 ">
+            No students found
+          </div>
+        )}
       </div>
     </div>
   );
