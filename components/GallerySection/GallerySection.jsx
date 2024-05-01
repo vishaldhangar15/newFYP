@@ -3,7 +3,7 @@ import { useState } from 'react';
 // import CloseIcon from '../node@mui/icons-material/Close';
 import { Cross1Icon } from '@radix-ui/react-icons';
 
-import './Gallery.css';
+import './GallerySection.css';
 const GallerySection = () => {
   let data = [
     {
