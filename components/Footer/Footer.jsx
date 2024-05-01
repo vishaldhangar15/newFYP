@@ -1,4 +1,3 @@
-import React from 'react';
 import Link from 'next/link';
 
 function Footer() {
@@ -36,25 +35,22 @@ function Footer() {
             </h2>
             <nav className="list-none mb-10">
               <li>
-                <Link
-                  href="/gallery"
-                  className="text-gray-400 hover:text-white"
-                >
+                <Link href="/gallery" className="text-primary hover:underline">
                   Gallery
                 </Link>
               </li>
               <li>
-                <Link href="#" className="text-gray-400 hover:text-white">
+                <Link href="#" className="text-primary hover:underline">
                   Second Link
                 </Link>
               </li>
               <li>
-                <Link href="#" className="text-gray-400 hover:text-white">
+                <Link href="#" className="text-primary hover:underline">
                   Third Link
                 </Link>
               </li>
               <li>
-                <a href="#" className="text-gray-400 hover:text-white">
+                <a href="#" className="text-primary hover:underline">
                   Fourth Link
                 </a>
               </li>

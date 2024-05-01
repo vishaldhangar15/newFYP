@@ -26,7 +26,6 @@ const AdmitStudent = () => {
   useEffect(() => {
     getStudentsData();
   }, [registeredStudents]);
-  console.log(registeredStudents);
   return (
     <div>
       <div className=" text-2xl md:text-3xl text-foreground font-extrabold text-center ">
