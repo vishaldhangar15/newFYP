@@ -32,7 +32,7 @@ export async function POST(request) {
     // finding the user in database and setting the refresh token to null
     const client = await clientPromise;
     const db = client.db();
-    const studentCollection = db.collection('students');
+    const studentCollection = db.collection('adminDetails');
     const updatedUser = await studentCollection.findOneAndUpdate(
       { _id: new ObjectId(userID) },
       { $set: { refreshToken: null } }
@@ -40,6 +40,7 @@ export async function POST(request) {
     if (!updatedUser) {
       return NextResponse.json({
         message: 'User not found',
+        status: 400,
         success: false,
       });
     }
@@ -50,6 +51,7 @@ export async function POST(request) {
     // deletig the coockies accessToken and refreshToken
     cookieStore.delete('accessToken', cookieoptions);
     cookieStore.delete('refreshToken', cookieoptions);
+    cookieStore.delete('role', cookieoptions);
 
     return NextResponse.json({
       message: 'Logged out successfully',

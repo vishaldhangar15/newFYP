@@ -149,6 +149,33 @@ const getComplaints = async () => {
   }
 };
 
+const logoutAdmin = async () => {
+  try {
+    const response = await fetch('/api/admin/logout', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+    });
+    const result = await response.json();
+    if (result.status === 200) {
+      return {
+        status: 200,
+        message: result.message,
+      };
+    }
+    return {
+      status: 400,
+      message: result.message,
+    };
+  } catch (error) {
+    return {
+      status: 400,
+      message: error.message,
+    };
+  }
+};
+
 export {
   verifyAdmin,
   getRegisteredStudents,
@@ -156,4 +183,5 @@ export {
   deleteStudent,
   addEvent,
   getComplaints,
+  logoutAdmin,
 };
