@@ -4,18 +4,23 @@ import { NextResponse } from 'next/server';
 const generateAccessAndRefreshToken = async (userid) => {
   try {
     // Generate access token
-    const accessToken = jwt.sign({ userid }, process.env.ACCESS_TOKEN_SECRET, {
-      expiresIn: process.env.ACCESS_TOKEN_EXPIRY, // Assuming ACCESS_TOKEN_EXPIRY is defined elsewhere
-    });
+    const accessToken = await jwt.sign(
+      { userid },
+      process.env.ACCESS_TOKEN_SECRET,
+      {
+        expiresIn: process.env.ACCESS_TOKEN_EXPIRY, // Assuming ACCESS_TOKEN_EXPIRY is defined elsewhere
+      }
+    );
 
     // Generate refresh token
-    const refreshToken = jwt.sign(
+    const refreshToken = await jwt.sign(
       { userid },
       process.env.REFRESH_TOKEN_SECRET,
       {
         expiresIn: process.env.REFRESH_TOKEN_EXPIRY, // Assuming REFRESH_TOKEN_EXPIRY is defined elsewhere
       }
     );
+    // console.log('accessToken: ', accessToken, ' refreshToken: ', refreshToken);
 
     return { accessToken, refreshToken };
   } catch (error) {

@@ -12,10 +12,12 @@ export async function GET(request) {
     }
 
     const accessToken = cookieStore.get('accessToken');
+    const rolwe = cookieStore.get('role');
     //  return the access token and refresh token
     return NextResponse.json({
       accessToken: accessToken?.value || null,
       refreshToken: refreshToken?.value || null,
+      role: rolwe?.value || null,
       success: true,
     });
   } catch (error) {

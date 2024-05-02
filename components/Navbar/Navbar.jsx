@@ -12,6 +12,7 @@ const NavBar = () => {
   const [navbar, setNavbar] = useState(false);
   const [accessToken, setaccessToken] = useState();
   const [refreshToken, setrefreshToken] = useState();
+  const [Role, setRole] = useState();
   const navLinks = [
     {
       id: 1,
@@ -31,9 +32,10 @@ const NavBar = () => {
   ];
   // getting tokens
   const token = async () => {
-    const { accessToken, refreshToken } = await getTokens();
+    const { accessToken, refreshToken, role } = await getTokens();
     setaccessToken(accessToken);
     setrefreshToken(refreshToken);
+    setRole(role);
   };
   useEffect(() => {
     token();
@@ -56,7 +58,7 @@ const NavBar = () => {
               {/* HAMBURGER BUTTON FOR MOBILE */}
               <div className="md:hidden flex gap-2 justify-center items-center">
                 <Togglebtn />
-                {refreshToken && (
+                {accessToken && (
                   <div
                     className={` mr-2 inline-block ${navbar ? 'hidden' : ''}`}
                   >
@@ -138,7 +140,11 @@ const NavBar = () => {
             <div className=" gap-4 hidden  md:flex   ">
               <Togglebtn />
 
-              <Link href="/student/dashboard">
+              <Link
+                href={
+                  Role === 'admin' ? '/admin/dashboard' : '/student/dashboard'
+                }
+              >
                 <Avatar>
                   <AvatarImage src="https://github.com/shadcn.png" />
                   <AvatarFallback>CN</AvatarFallback>
