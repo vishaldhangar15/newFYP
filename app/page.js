@@ -3,6 +3,7 @@ import Hero from '@/components/LandingPage/Hero';
 import ImageGallery from '@/components/Gallery/Gallery';
 import Footer from '@/components/Footer/Footer';
 import NewNavBar from '@/components/Navbar/NewNavBar';
+import ContactUs from '@/components/ContactUs/ContactUs';
 const page = () => {
   return (
     <div>
@@ -11,6 +12,7 @@ const page = () => {
         <Hero />
       </div>
       <ImageGallery />
+      <ContactUs />
       <Footer />
     </div>
   );
