@@ -128,10 +128,32 @@ const addEvent = async (data) => {
   }
 };
 
+const getComplaints = async () => {
+  try {
+    const response = await fetch('/api/admin/getComplaints', {
+      method: 'GET',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+    });
+    const result = await response.json();
+    return {
+      status: result.status,
+      data: result.data,
+    };
+  } catch (error) {
+    return {
+      status: 400,
+      message: error.message,
+    };
+  }
+};
+
 export {
   verifyAdmin,
   getRegisteredStudents,
   verifyStudent,
   deleteStudent,
   addEvent,
+  getComplaints,
 };
