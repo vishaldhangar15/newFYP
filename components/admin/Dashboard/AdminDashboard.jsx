@@ -30,7 +30,7 @@ const AdminDashboard = () => {
           <AdminMobileNavBar />
           {/* mobile navbar sheet here  */}
           {/* admin breadcrumb here  */}
-          <AdminBreadCrumb />
+          <AdminBreadCrumb active={active} />
           {/* admin breadcrumb here  */}
         </header>
         {/* maint content area here  */}
