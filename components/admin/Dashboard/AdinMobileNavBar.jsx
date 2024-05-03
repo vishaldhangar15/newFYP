@@ -11,16 +11,19 @@ import {
   Package,
   Package2,
   PanelLeft,
+  MessageSquare,
+  CalendarCheck,
+  NotebookPen,
   Search,
   Settings,
-  ShoppingCart,
-  Truck,
-  Users2,
 } from 'lucide-react';
 import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet';
 import { Button } from '@/components/ui/button';
 import Link from 'next/link';
-const AdminMobileNavBar = () => {
+const AdminMobileNavBar = ({ active, hadncleActive }) => {
+  const currActive = 'flex items-center gap-4 px-2.5 text-foreground';
+  const notActive =
+    'flex items-center gap-4 px-2.5 text-muted-foreground hover:text-foreground';
   return (
     <Sheet>
       <SheetTrigger asChild>
@@ -40,37 +43,42 @@ const AdminMobileNavBar = () => {
           </Link>
           <Link
             href="#"
-            className="flex items-center gap-4 px-2.5 text-muted-foreground hover:text-foreground"
+            className={active === 'Dashboard' ? currActive : notActive}
+            onClick={() => hadncleActive('Dashboard')}
           >
             <Home className="h-5 w-5" />
             Dashboard
           </Link>
           <Link
             href="#"
-            className="flex items-center gap-4 px-2.5 text-foreground"
+            className={active === 'Complaints' ? currActive : notActive}
+            onClick={() => hadncleActive('Complaints')}
           >
-            <ShoppingCart className="h-5 w-5" />
-            Orders
+            <MessageSquare className="h-5 w-5" />
+            Complaints
           </Link>
           <Link
             href="#"
             className="flex items-center gap-4 px-2.5 text-muted-foreground hover:text-foreground"
+            onClick={() => hadncleActive('AdmitStudent')}
           >
-            <Package className="h-5 w-5" />
-            Products
+            <NotebookPen className="h-5 w-5" />
+            Admit Student
           </Link>
           <Link
             href="#"
-            className="flex items-center gap-4 px-2.5 text-muted-foreground hover:text-foreground"
+            className={active === 'AddEvent' ? currActive : notActive}
+            onClick={() => hadncleActive('AddEvent')}
           >
-            <Users2 className="h-5 w-5" />
-            Customers
+            <CalendarCheck className="h-5 w-5" />
+            Add Event
           </Link>
           <Link
             href="#"
-            className="flex items-center gap-4 px-2.5 text-muted-foreground hover:text-foreground"
+            className={active === 'Settings' ? currActive : notActive}
+            onClick={() => hadncleActive('Settings')}
           >
-            <LineChart className="h-5 w-5" />
+            <Settings className="h-5 w-5" />
             Settings
           </Link>
         </nav>
