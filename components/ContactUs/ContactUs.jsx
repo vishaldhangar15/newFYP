@@ -13,10 +13,6 @@ const ContactUs = () => {
               height="100%"
               title="map"
               className="absolute inset-0 filter  contrast-125 opacity-50"
-              frameborder="0"
-              marginheight="0"
-              marginwidth="0"
-              scrolling="no"
               src='https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3771.9734364689693!2d72.85340090866987!3d19.02089215362998!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7cf26c0b2e16d%3A0xc68a71bc4738e61c!2sVJTI%20Hostel%20B!5e0!3m2!1sen!2sin!4v1714647813036!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade'
             ></iframe>
             <div className="relative flex flex-wrap py-6 rounded shadow-md">
@@ -51,20 +47,26 @@ const ContactUs = () => {
               Post-ironic portland shabby chic echo park, banjo fashion axe
             </p>
             <div className="relative mb-4">
-              <label for="name" className="leading-7 text-sm text-foreground">
+              <label
+                htmlFor="name"
+                className="leading-7 text-sm text-foreground"
+              >
                 Name
               </label>
               <Input type="text" id="name" name="name" />
             </div>
             <div className="relative mb-4">
-              <label for="email" className="leading-7 text-sm text-gray-400">
+              <label
+                htmlFor="email"
+                className="leading-7 text-sm text-gray-400"
+              >
                 Email
               </label>
               <Input type="email" id="email" name="email" />
             </div>
             <div className="relative mb-4">
               <label
-                for="message"
+                htmlFor="message"
                 className="leading-7 text-sm text-foreground"
               >
                 Message
