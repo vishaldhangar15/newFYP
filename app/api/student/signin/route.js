@@ -48,6 +48,14 @@ export async function POST(request) {
       { _id: existingStudent?._id },
       { $set: { refreshToken: refreshToken } }
     );
+
+    // checking if isVerified is true
+    if (!existingStudent.isVerified) {
+      return NextResponse.json(
+        { message: 'You are not verified yet' },
+        { status: 400 }
+      );
+    }
     // setting accesstoken and refreshtoken in cookies
     const cookieOptions = {
       httpOnly: true,
