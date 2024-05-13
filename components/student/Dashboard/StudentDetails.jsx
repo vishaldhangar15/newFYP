@@ -20,7 +20,7 @@ const StudentDetails = ({ registrationNumber, yearOfStudy }) => {
           <div className="text-xs text-muted-foreground">{yearOfStudy}</div>
         </CardContent>
         <CardFooter>
-          <Progress value={25} aria-label="25% increase" />
+          <Progress value={100} aria-label="25% increase" />
         </CardFooter>
       </Card>
     </div>

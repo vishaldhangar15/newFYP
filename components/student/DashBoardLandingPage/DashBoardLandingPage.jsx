@@ -19,7 +19,7 @@ const DashBoardLandingPage = ({ student, active, hadncleActive }) => {
               registrationNumber={student.regNo}
               yearOfStudy={student.yearOfStudy}
             />
-            <RoomNo />
+            <RoomNo RoomNo={student.RoomNo} />
           </div>
           <ComplaintTable Complaints={student.complaints} />
         </div>
