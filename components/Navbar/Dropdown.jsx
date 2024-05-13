@@ -24,9 +24,9 @@ const Dropdown = () => {
           <Link href="/admin/signin">
             <DropdownMenuItem>Admin Login</DropdownMenuItem>
           </Link>
-          <Link href="/messAdmin/signin">
+          {/* <Link href="/messAdmin/signin">
             <DropdownMenuItem> Mess Admin Login</DropdownMenuItem>
-          </Link>
+          </Link> */}
         </DropdownMenuContent>
       </DropdownMenu>
     </div>
