@@ -13,9 +13,9 @@ function About() {
             <p className="mb-8 text-white-400 md:text-lg text-justify">
               Welcome to VJTI Hostel, where we strive to provide a safe,
               comfortable, and nurturing environment for students seeking a home
-              away from home. Our hostel is more than just a place to stay –
-              it's a community that fosters personal growth, academic
-              excellence, and lifelong friendships.
+              away from home. Our hostel is more than just a place to stay – it
+              is a community that fosters personal growth, academic excellence,
+              and lifelong friendships.
             </p>
             <h2 className="text-2xl font-bold mb-2 md:text-3xl  text-primary text-center">
               Our Mission
