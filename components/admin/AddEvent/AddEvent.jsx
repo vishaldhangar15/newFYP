@@ -44,7 +44,6 @@ const AddEvent = () => {
       other: other,
     };
 
-    console.log(Event);
     // check if start date is greater than todays data
     if (
       startDate.getDate() <= new Date().getDate() &&

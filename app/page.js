@@ -4,6 +4,7 @@ import ImageGallery from '@/components/Gallery/Gallery';
 import Footer from '@/components/Footer/Footer';
 import NewNavBar from '@/components/Navbar/NewNavBar';
 import ContactUs from '@/components/ContactUs/ContactUs';
+import EventSection from '@/components/EventSection/EventSection';
 const page = () => {
   return (
     <div>
@@ -13,6 +14,8 @@ const page = () => {
       </div>
       <ImageGallery />
       <ContactUs />
+      <EventSection />
+
       <Footer />
     </div>
   );

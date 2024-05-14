@@ -1,6 +1,7 @@
 import React from 'react';
 import { Button } from '../ui/button';
 import HeroCards from './HeroCards';
+import Link from 'next/link';
 
 const Hero = () => {
   return (
@@ -28,7 +29,9 @@ const Hero = () => {
         </p>
 
         <div className="space-y-4 md:space-y-0 md:space-x-4">
-          <Button className="w-full md:w-1/3">Get Started</Button>
+          <Link href="/student/signin">
+            <Button className="w-full md:w-1/3">Get Started</Button>
+          </Link>
         </div>
       </div>
 
