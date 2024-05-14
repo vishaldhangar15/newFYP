@@ -10,7 +10,7 @@ import {
 import { Progress } from '@/components/ui/progress';
 const RoomNo = ({ RoomNo }) => {
   // set the first char of the room no as the block name
-  const blockName = RoomNo.charAt(0) + ' ' + 'Block';
+  const blockName = RoomNo?.charAt(0) + ' ' + 'Block';
   return (
     <div>
       {' '}

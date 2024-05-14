@@ -62,7 +62,7 @@ const Dashboard = () => {
                 student={student}
               />
             )}
-            {active === 'Profile' && <ProfileSection />}
+            {active === 'Profile' && <ProfileSection student={student} />}
             {active === 'Leave' && <LeaveSection />}
             {active === 'Complaints' && <ComplaintSection />}
             {active === 'Settings' && <SettingsSection />}
