@@ -41,7 +41,7 @@ const Page = () => {
                   Security
                 </h2>
                 <p className="leading-relaxed text-base">
-                  At VJTI Hostel, we prioritize the safety and security of our
+                  At VJTI Hostel we prioritize the safety and security of our
                   residents above all else. That is why we have implemented a
                   comprehensive security system to ensure that you feel safe and
                   protected at all times. Our hostel is equipped with
@@ -84,7 +84,7 @@ const Page = () => {
                   Home Like Environment
                 </h2>
                 <p className="leading-relaxed text-base">
-                  At VJTI Hostel, we understand the importance of feeling at
+                  At VJTI Hostel we understand the importance of feeling at
                   home, even when you are away from home. That is why we have
                   created a warm and welcoming environment that fosters a strong
                   sense of community among our residents.
