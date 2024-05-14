@@ -2,15 +2,16 @@ import React from 'react';
 import NavBar from '@/components/Navbar/Navbar';
 import Link from 'next/link';
 import Footer from '@/components/Footer/Footer';
+
 const Page = () => {
   return (
     <div>
       <NavBar />
-      <section className="text-muted-foreground  body-font border-b ">
+      <section className="text-muted-foreground body-font border-b">
         <div className="container px-5 py-24 mx-auto">
           <div className="text-center mb-20">
             <h1 className="sm:text-3xl text-2xl font-medium title-font text-primary mb-4">
-              Facillities We Provide
+              Facilities We Provide
             </h1>
             <p className="text-base leading-relaxed xl:w-2/4 lg:w-3/4 mx-auto text-foreground text-opacity-80">
               Blue bottle crucifix vinyl post-ironic four dollar toast vegan
@@ -22,8 +23,8 @@ const Page = () => {
             </div>
           </div>
           <div className="flex flex-wrap sm:-m-4 -mb-10 -mt-4 space-x-2 md:space-y-0 space-y-6 justify-evenly">
-            <div className="p-4 md:w-1/4 flex s flex-col text-center items-center cursor-pointer transition-shadow duration-200 hover:shadow-[11px_11px_28px_#272e3a,-11px_-11px_28px_#475468] border rounded-lg">
-              <div className="w-20 h-20 inline-flex items-center justify-center rounded-full  mb-5 flex-shrink-0">
+            <div className="p-4 md:w-1/4 flex flex-col text-center items-center cursor-pointer transition-shadow duration-200 hover:shadow-[11px_11px_28px_#272e3a,-11px_-11px_28px_#475468] border rounded-lg">
+              <div className="w-20 h-20 inline-flex items-center justify-center rounded-full mb-5 flex-shrink-0">
                 <svg
                   className="w-10 h-10"
                   xmlns="http://www.w3.org/2000/svg"
@@ -60,13 +61,13 @@ const Page = () => {
                     className="w-4 h-4 ml-2"
                     viewBox="0 0 24 24"
                   >
-                    <path d="M5 12h14M12 5l7 7-7 7"></path>
+                    <path d="M5 12h14M12 5l7 7-7 7" />
                   </svg>
                 </Link>
               </div>
             </div>
-            <div className="p-4 md:w-1/4 flex s flex-col text-center items-center cursor-pointer transition-shadow duration-200 hover:shadow-[11px_11px_28px_#272e3a,-11px_-11px_28px_#475468] border border-gray-600 rounded-lg">
-              <div className="w-20 h-20 inline-flex items-center justify-center rounded-full  mb-5 flex-shrink-0">
+            <div className="p-4 md:w-1/4 flex flex-col text-center items-center cursor-pointer transition-shadow duration-200 hover:shadow-[11px_11px_28px_#272e3a,-11px_-11px_28px_#475468] border border-gray-600 rounded-lg">
+              <div className="w-20 h-20 inline-flex items-center justify-center rounded-full mb-5 flex-shrink-0">
                 <svg
                   className="w-10 h-10"
                   xmlns="http://www.w3.org/2000/svg"
@@ -79,7 +80,7 @@ const Page = () => {
                 </svg>
               </div>
               <div className="flex-grow">
-                <h2 className="text-white text-lg title-font font-medium mb-3">
+                <h2 className="text-foreground text-lg title-font font-medium mb-3">
                   Home Like Environment
                 </h2>
                 <p className="leading-relaxed text-base">
@@ -102,12 +103,12 @@ const Page = () => {
                     className="w-4 h-4 ml-2"
                     viewBox="0 0 24 24"
                   >
-                    <path d="M5 12h14M12 5l7 7-7 7"></path>
+                    <path d="M5 12h14M12 5l7 7-7 7" />
                   </svg>
                 </Link>
               </div>
             </div>
-            <div className="p-4 md:w-1/4 flex s flex-col text-center items-center cursor-pointer transition-shadow duration-200 hover:shadow-[11px_11px_28px_#272e3a,-11px_-11px_28px_#475468] border border-gray-600 rounded-lg">
+            <div className="p-4 md:w-1/4 flex flex-col text-center items-center cursor-pointer transition-shadow duration-200 hover:shadow-[11px_11px_28px_#272e3a,-11px_-11px_28px_#475468] border border-gray-600 rounded-lg">
               <div className="w-20 h-20 inline-flex items-center justify-center rounded-full mb-5 flex-shrink-0">
                 <svg
                   className="w-10 h-10"
@@ -121,12 +122,12 @@ const Page = () => {
                 </svg>
               </div>
               <div className="flex-grow">
-                <h2 className="text-white text-lg title-font font-medium mb-3">
+                <h2 className="text-foreground text-lg title-font font-medium mb-3">
                   Sports
                 </h2>
                 <p className="leading-relaxed text-base">
                   At VJTI Hostel, we believe in promoting a healthy and active
-                  lifestyle for our residents. That's why we offer access to a
+                  lifestyle for our residents. That is why we offer access to a
                   wide range of sports facilities, gyms, and grounds/courts,
                   ensuring that you have ample opportunities to engage in
                   physical activities and stay fit.
@@ -145,7 +146,7 @@ const Page = () => {
                     className="w-4 h-4 ml-2"
                     viewBox="0 0 24 24"
                   >
-                    <path d="M5 12h14M12 5l7 7-7 7"></path>
+                    <path d="M5 12h14M12 5l7 7-7 7" />
                   </svg>
                 </Link>
               </div>

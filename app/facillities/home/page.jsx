@@ -10,14 +10,14 @@ const Page = () => {
       <section className="text-foreground border-b border-gray-600 body-font">
         <div className="container px-5 py-24 mx-auto flex flex-wrap">
           <div
-            className="lg:w-1/2  w-full mb-10 lg:mb-0 rounded-lg overflow-hidden flex center justify-center"
+            className="lg:w-1/2 w-full mb-10 lg:mb-0 rounded-lg overflow-hidden flex center justify-center"
             style={{
-              boxShadow: ' 11px 11px 22px #171b22,-11px -11px 22px #576780',
+              boxShadow: '11px 11px 22px #171b22, -11px -11px 22px #576780',
             }}
           >
             <Image
-              width="100"
-              height="100"
+              width={720}
+              height={600}
               alt="feature"
               className="object-cover object-center h-full w-full"
               src="https://dummyimage.com/720x600"
@@ -26,10 +26,10 @@ const Page = () => {
           <div className="flex flex-col flex-wrap lg:py-6 -mb-10 lg:w-1/2 lg:pl-12 lg:text-left text-center">
             <div className="flex flex-col mb-10 lg:items-start items-center">
               <div
-                className="w-12 h-12 inline-flex items-center justify-center rounded-full  text-primary mb-5"
+                className="w-12 h-12 inline-flex items-center justify-center rounded-full text-primary mb-5"
                 style={{
                   background: '#374151',
-                  boxShadow: '11px 11px 28px #272e3a,-11px -11px 28px #475468',
+                  boxShadow: '11px 11px 28px #272e3a, -11px -11px 28px #475468',
                 }}
               >
                 <svg
@@ -49,18 +49,19 @@ const Page = () => {
                 </h2>
                 <p className="leading-relaxed text-base">
                   At VJTI Hostel, we understand the importance of feeling at
-                  home, even when you're away from home. That's why we've
-                  created a warm and welcoming environment that fosters a strong
-                  sense of community among our residents. Beyond your room, our
-                  hostel offers a variety of common areas where you can
-                  socialize, study, or simply unwind. Our lounges are perfect
-                  for catching up with friends, playing games, or watching
-                  movies. Our study rooms provide a quiet and conducive
+                  home, even when you&apos;re away from home. That&apos;s why
+                  we&apos;ve created a warm and welcoming environment that
+                  fosters a strong sense of community among our residents.
+                  Beyond your room, our hostel offers a variety of common areas
+                  where you can socialize, study, or simply unwind. Our lounges
+                  are perfect for catching up with friends, playing games, or
+                  watching movies. Our study rooms provide a quiet and conducive
                   environment for focused studying or group work. We also
                   organize regular community events and activities to help you
                   connect with your fellow residents and create lasting
-                  memories. From movie nights to cultural celebrations, there's
-                  always something exciting happening at VJTI Hostel.
+                  memories. From movie nights to cultural celebrations,
+                  there&apos;s always something exciting happening at VJTI
+                  Hostel.
                 </p>
               </div>
             </div>

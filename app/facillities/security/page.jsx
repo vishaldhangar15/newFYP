@@ -2,22 +2,23 @@ import React from 'react';
 import NavBar from '@/components/Navbar/Navbar';
 import Image from 'next/image';
 import Footer from '@/components/Footer/Footer';
+
 const Page = () => {
   return (
     <div>
       <NavBar />
-      <section className="text-foreground border-b -600  body-font">
+      <section className="text-foreground border-b border-gray-600 body-font">
         <div className="container px-5 py-24 mx-auto flex flex-wrap">
           <div
-            className="lg:w-1/2  w-full mb-10 lg:mb-0 rounded-lg overflow-hidden flex center justify-center"
+            className="lg:w-1/2 w-full mb-10 lg:mb-0 rounded-lg overflow-hidden flex center justify-center"
             style={{
-              boxShadow: ' 11px 11px 22px #171b22,-11px -11px 22px #576780',
+              boxShadow: '11px 11px 22px #171b22, -11px -11px 22px #576780',
             }}
           >
             <Image
               alt="feature"
-              width={100}
-              height={100}
+              width={720}
+              height={600}
               className="object-cover object-center h-full w-full"
               src="https://dummyimage.com/720x600"
             />
@@ -27,7 +28,7 @@ const Page = () => {
               <div
                 className="w-12 h-12 inline-flex items-center justify-center rounded-full mb-5"
                 style={{
-                  boxShadow: '11px 11px 28px #272e3a,-11px -11px 28px #475468',
+                  boxShadow: '11px 11px 28px #272e3a, -11px -11px 28px #475468',
                 }}
               >
                 <svg
@@ -47,9 +48,9 @@ const Page = () => {
                 </h2>
                 <p className="text-foreground mb-4 md:text-lg">
                   At VJTI Hostel, we prioritize the safety and security of our
-                  residents above all else. That's why we've implemented a
-                  comprehensive security system to ensure that you feel safe and
-                  protected at all times.
+                  residents above all else. That&apos;s why we&apos;ve
+                  implemented a comprehensive security system to ensure that you
+                  feel safe and protected at all times.
                 </p>
                 <p className="text-foreground mb-4 md:text-lg">
                   Our hostel is equipped with 24/7 surveillance cameras

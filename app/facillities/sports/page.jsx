@@ -2,21 +2,22 @@ import React from 'react';
 import NavBar from '@/components/Navbar/Navbar';
 import Image from 'next/image';
 import Footer from '@/components/Footer/Footer';
+
 const Page = () => {
   return (
     <div>
       <NavBar />
-      <section className="border-b  text-foreground body-font">
+      <section className="border-b text-foreground body-font">
         <div className="container px-5 py-24 mx-auto flex flex-wrap">
           <div
-            className="lg:w-1/2  w-full mb-10 lg:mb-0 rounded-lg overflow-hidden flex center justify-center"
+            className="lg:w-1/2 w-full mb-10 lg:mb-0 rounded-lg overflow-hidden flex center justify-center"
             style={{
-              boxShadow: ' 11px 11px 22px #171b22,-11px -11px 22px #576780',
+              boxShadow: '11px 11px 22px #171b22, -11px -11px 22px #576780',
             }}
           >
             <Image
-              width={100}
-              height={100}
+              width={720}
+              height={600}
               alt="feature"
               className="object-cover object-center h-full w-full"
               src="https://thumbs.dreamstime.com/b/soccer-team-practicing-football-ground-teenagers-playing-field-182546504.jpg"
@@ -42,16 +43,16 @@ const Page = () => {
                 </h2>
                 <p className="text-foreground mb-4 pt-10 md:text-lg">
                   At VJTI Hostel, we believe in promoting a healthy and active
-                  lifestyle for our residents. That's why we offer access to a
-                  wide range of sports facilities, gyms, and grounds/courts,
-                  ensuring that you have ample opportunities to engage in
-                  physical activities and stay fit.
+                  lifestyle for our residents. That&apos;s why we offer access
+                  to a wide range of sports facilities, gyms, and
+                  grounds/courts, ensuring that you have ample opportunities to
+                  engage in physical activities and stay fit.
                 </p>
                 <p className="text-foreground mb-4 md:text-lg">
                   Our on-site gymnasium is equipped with state-of-the-art
                   exercise equipment, including treadmills, exercise bikes,
-                  weight machines, and free weights. Whether you're looking to
-                  build strength, improve cardiovascular health, or simply
+                  weight machines, and free weights. Whether you&apos;re looking
+                  to build strength, improve cardiovascular health, or simply
                   maintain an active lifestyle, our gym has everything you need.
                 </p>
                 <p className="text-foreground mb-4 md:text-lg">
@@ -62,15 +63,17 @@ const Page = () => {
                   residents.
                 </p>
                 <p className="text-foreground mb-4 md:text-lg">
-                  If you're a fan of team sports, our multipurpose field can
-                  accommodate a variety of games, including soccer, cricket, and
-                  more. You can join our sports clubs or organize your own games
-                  with friends, fostering a sense of community and camaraderie.
+                  If you&apos;re a fan of team sports, our multipurpose field
+                  can accommodate a variety of games, including soccer, cricket,
+                  and more. You can join our sports clubs or organize your own
+                  games with friends, fostering a sense of community and
+                  camaraderie.
                 </p>
                 <p className="text-foreground mb-4 md:text-lg">
                   In addition to these facilities, we also offer group fitness
                   classes led by experienced instructors. From yoga and Zumba to
-                  kickboxing and dance, there's something for everyone to enjoy.
+                  kickboxing and dance, there&apos;s something for everyone to
+                  enjoy.
                 </p>
                 <p className="text-foreground mb-4 md:text-lg">
                   At VJTI Hostel, we believe that a healthy mind resides in a
