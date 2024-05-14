@@ -2,7 +2,8 @@
 
 # dependencies
 /node_modules
-/.env
+# ignore .env file
+.env
 /.pnp
 .pnp.js
 .yarn/install-state.gz
