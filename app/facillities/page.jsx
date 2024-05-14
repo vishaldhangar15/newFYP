@@ -44,7 +44,7 @@ const Page = () => {
                   At VJTI Hostel, we prioritize the safety and security of our
                   residents above all else. That is why we have implemented a
                   comprehensive security system to ensure that you feel safe and
-                  protected at all times. Our hostel is equipped with 24/7
+                  protected at all times. Our hostel is equipped with
                   surveillance cameras.
                 </p>
                 <Link
@@ -128,7 +128,7 @@ const Page = () => {
                 <p className="leading-relaxed text-base">
                   At VJTI Hostel, we believe in promoting a healthy and active
                   lifestyle for our residents. That is why we offer access to a
-                  wide range of sports facilities, gyms, and grounds/courts,
+                  wide range of sports facilities, gyms, and grounds or courts,
                   ensuring that you have ample opportunities to engage in
                   physical activities and stay fit.
                 </p>
