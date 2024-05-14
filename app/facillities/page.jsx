@@ -42,7 +42,7 @@ const Page = () => {
                 </h2>
                 <p className="leading-relaxed text-base">
                   At VJTI Hostel, we prioritize the safety and security of our
-                  residents above all else. That is why we've implemented a
+                  residents above all else. That is why we have implemented a
                   comprehensive security system to ensure that you feel safe and
                   protected at all times. Our hostel is equipped with 24/7
                   surveillance cameras.
