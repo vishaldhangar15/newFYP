@@ -22,12 +22,12 @@ const NavBar = () => {
     {
       id: 2,
       text: 'About',
-      url: '/#about',
+      url: '/about',
     },
     {
       id: 3,
       text: 'Facillities',
-      url: '/#facillities',
+      url: '/facillities',
     },
   ];
   // getting tokens
