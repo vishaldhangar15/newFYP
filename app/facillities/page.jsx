@@ -14,9 +14,13 @@ const Page = () => {
               Facilities We Provide
             </h1>
             <p className="text-base leading-relaxed xl:w-2/4 lg:w-3/4 mx-auto text-foreground text-opacity-80">
-              Blue bottle crucifix vinyl post-ironic four dollar toast vegan
-              taxidermy. Gastropub indxgo juice poutine, ramps microdosing banh
-              mi pug.
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+              Assumenda animi iusto possimus iure aliquam vero consectetur
+              consequuntur harum illo alias, vel necessitatibus natus eaque
+              porro perferendis eius aut excepturi. Error molestias eaque
+              perspiciatis doloribus accusantium necessitatibus quisquam quis,
+              asperiores commodi corrupti. Quia dignissimos voluptas molestiae
+              quod et eligendi vero unde?
             </p>
             <div className="flex mt-6 justify-center">
               <div className="w-16 h-1 rounded-full bg-primary inline-flex"></div>
@@ -41,11 +45,9 @@ const Page = () => {
                   Security
                 </h2>
                 <p className="leading-relaxed text-base">
-                  At VJTI Hostel we prioritize the safety and security of our
-                  residents above all else. That is why we have implemented a
-                  comprehensive security system to ensure that you feel safe and
-                  protected at all times. Our hostel is equipped with
-                  surveillance cameras.
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil
+                  atque sequi ut obcaecati ad eligendi iure iusto accusamus
+                  aliquam! Suscipit nam minus ut labore ad.
                 </p>
                 <Link
                   className="mt-3 text-primary inline-flex items-center"
@@ -84,10 +86,13 @@ const Page = () => {
                   Home Like Environment
                 </h2>
                 <p className="leading-relaxed text-base">
-                  At VJTI Hostel we understand the importance of feeling at
-                  home, even when you are away from home. That is why we have
-                  created a warm and welcoming environment that fosters a strong
-                  sense of community among our residents.
+                  Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                  Incidunt velit qui non inventore, necessitatibus culpa
+                  repellat officia dignissimos eligendi unde quaerat atque
+                  nostrum eum doloremque voluptatum esse. Debitis, quidem
+                  laboriosam, ipsam sequi dolorem, fuga adipisci dolorum
+                  molestias sapiente libero doloribus eius beatae id labore? Ex
+                  quam illum reiciendis cupiditate sed.
                 </p>
                 <Link
                   className="mt-3 text-primary inline-flex items-center"
@@ -126,11 +131,13 @@ const Page = () => {
                   Sports
                 </h2>
                 <p className="leading-relaxed text-base">
-                  At VJTI Hostel, we believe in promoting a healthy and active
-                  lifestyle for our residents. That is why we offer access to a
-                  wide range of sports facilities, gyms, and grounds or courts,
-                  ensuring that you have ample opportunities to engage in
-                  physical activities and stay fit.
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque
+                  repudiandae ipsa nobis sint numquam facere sequi modi
+                  necessitatibus. Similique, nobis commodi eaque quae quaerat
+                  consequuntur id beatae accusamus exercitationem accusantium
+                  atque delectus possimus nisi doloribus quisquam blanditiis
+                  fuga perferendis molestias? Iste dolorem voluptatibus unde
+                  amet repudiandae architecto totam deserunt in!
                 </p>
                 <Link
                   className="mt-3 text-primary inline-flex items-center"
