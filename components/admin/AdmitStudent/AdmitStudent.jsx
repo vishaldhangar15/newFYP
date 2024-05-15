@@ -38,7 +38,9 @@ const AdmitStudent = () => {
             <TableHeader>
               <TableRow>
                 <TableHead className="w-[100px]">Sr. No.</TableHead>
-                <TableHead>Method</TableHead>
+                <TableHead>Name</TableHead>
+                <TableHead>Email</TableHead>
+                <TableHead>Transaction ID</TableHead>
                 <TableHead className="text-right">Verify</TableHead>
               </TableRow>
             </TableHeader>
@@ -48,6 +50,8 @@ const AdmitStudent = () => {
                   <TableRow key={index}>
                     <TableCell className="font-medium">{index + 1}</TableCell>
                     <TableCell>{`${obj.firstName} ${obj.lastName}`}</TableCell>
+                    <TableCell>{` ${obj?.email}`}</TableCell>
+                    <TableCell>{` ${obj?.transactionId}`}</TableCell>
                     <TableCell className="flex justify-end gap-4 ">
                       <AdmitStudentDialog
                         id={obj._id}
