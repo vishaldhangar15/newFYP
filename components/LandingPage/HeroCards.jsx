@@ -158,7 +158,13 @@ const HeroCards = () => {
     //   </Card>
     // </div>
     <div>
-      <Image src={bg} alt="Hostel" width={700} height={500} />
+      <Image
+        src={bg}
+        alt="Hostel"
+        width={700}
+        height={500}
+        className="image-animation"
+      />
     </div>
   );
 };

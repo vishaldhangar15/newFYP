@@ -92,3 +92,20 @@
     transform: rotate(90deg);
   }
 }
+
+/* styles.css */
+@keyframes upDown {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-20px); /* Adjust this value as needed */
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.image-animation {
+  animation: upDown 2s ease-in-out infinite;
+}

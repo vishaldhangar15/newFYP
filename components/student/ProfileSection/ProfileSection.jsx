@@ -15,6 +15,7 @@ import { Button } from '@/components/ui/button';
 const ProfilePage = ({ student }) => {
   const name = student?.firstName + ' ' + student?.lastName;
 
+  const firstLetter = name.charAt(0);
   return (
     <div className="flex flex-col md:flex-row h-screen">
       {/* Left side - Photo and other content */}
@@ -28,14 +29,17 @@ const ProfilePage = ({ student }) => {
               </label>
             </div>
             <div>
-              <Avatar className="w-48 h-48 m-16 ">
+              {/* <Avatar className="w-48 h-48 m-16 ">
                 <AvatarImage src="https://github.com/shadcn.png" />
                 <AvatarFallback>CN</AvatarFallback>
-              </Avatar>
-              <div className="grid w-full max-w-sm items-center gap-1.5">
+              </Avatar> */}
+              <div className="w-48 h-48 m-16 flex items-center justify-center text-8xl bg-slate-800 rounded-full ">
+                <div>{firstLetter}</div>
+              </div>
+              {/* <div className="grid w-full max-w-sm items-center gap-1.5">
                 <Label htmlFor="picture">Picture</Label>
                 <Input id="picture" type="file" />
-              </div>
+              </div> */}
             </div>
           </div>
 
@@ -47,7 +51,7 @@ const ProfilePage = ({ student }) => {
         <div className="max-w-md mx- ">
           <Card className=" bg-transparent">
             <CardHeader>
-              <CardTitle className="text-green-700 text-2xl font-bold p-2 ">
+              <CardTitle className="text-primary text-2xl font-bold p-2 ">
                 Details:
               </CardTitle>
               <CardDescription></CardDescription>
