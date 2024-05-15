@@ -10,7 +10,7 @@ import {
 } from '@/components/ui/card';
 
 const EventCard = ({ data }) => {
-  console.log(data);
+  // console.log(data);
   const name = '';
   const student = undefined;
   return (

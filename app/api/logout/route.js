@@ -28,7 +28,7 @@ export async function POST(request) {
       });
     }
     const userID = decodedToken?.userid;
-    console.log(userID);
+    // console.log(userID);
     // finding the user in database and setting the refresh token to null
     const client = await clientPromise;
     const db = client.db();

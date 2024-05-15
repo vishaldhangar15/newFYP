@@ -31,7 +31,7 @@ const AdminSignIn = () => {
     // Here you can access formData.email and formData.password
     // and perform any necessary actions, such as submitting the form data to a server.
     const res = await verifyAdmin(formData);
-    console.log(res);
+    // console.log(res);
 
     if (res.status === 200) {
       toast.success(res.message);

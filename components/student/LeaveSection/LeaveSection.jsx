@@ -40,7 +40,7 @@ const LeaveSection = () => {
       reason: reason,
     };
 
-    console.log(leave);
+    // console.log(leave);
     // check if start date is greater than todays data
     if (
       startDate.getDate() <= new Date().getDate() &&

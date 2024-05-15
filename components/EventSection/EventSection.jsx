@@ -11,7 +11,7 @@ const EventSection = () => {
   useEffect(() => {
     getdata();
   }, []);
-  console.log(event);
+  // console.log(event);
   return (
     <div className="">
       <div className="text-primary text-center text-3xl font-extrabold">

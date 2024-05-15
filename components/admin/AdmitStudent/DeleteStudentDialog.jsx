@@ -26,14 +26,14 @@ const DeleteStudentDialog = ({
     if (res.status === 200) {
       toast.success(res.message);
       // delete the student from the list
-      console.log('before deletion');
-      console.log(registeredStudents);
+      // console.log('before deletion');
+      // console.log(registeredStudents);
       if (registeredStudents) {
         const newList = registeredStudents.filter(
           (student) => student._id !== id
         );
-        console.log('after deletion');
-        console.log(newList);
+        // console.log('after deletion');
+        // console.log(newList);
 
         setRegisteredStudents(newList);
       }

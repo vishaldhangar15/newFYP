@@ -25,8 +25,8 @@ const SignIn = () => {
   const handleSubmit = async () => {
     event.preventDefault();
     const res = await loginStudent(loginDetails);
-    console.log('this is res');
-    console.log(res);
+    // console.log('this is res');
+    // console.log(res);
     if (res.status == 200) {
       toast.success(res.message);
       router.push('/student/dashboard');

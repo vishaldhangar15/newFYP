@@ -28,7 +28,7 @@ const LogOutSection = () => {
   const router = useRouter();
   const logoutHandler = async () => {
     const res = await logout();
-    console.log(res);
+    // console.log(res);
     if (res.status === 200) {
       toast.success(res.message);
       router.push('/');
