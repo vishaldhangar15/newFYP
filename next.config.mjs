@@ -6,6 +6,7 @@ const nextConfig = {
       'thumbs.dreamstime.com',
       'th.bing.com',
       'flowbite.com',
+      'encrypted-tbn0.gstatic.com',
     ],
   },
 };

@@ -20,7 +20,7 @@ const Page = () => {
               width={720}
               height={600}
               className="object-cover object-center h-full w-full"
-              src="https://dummyimage.com/720x600"
+              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcThA-Uin0feSjgRcXcaJWQ2dtY32Oq3MrICajxb7pLujg&s"
             />
           </div>
           <div className="flex flex-col flex-wrap lg:py-6 -mb-10 lg:w-1/2 lg:pl-12 lg:text-left text-center">
