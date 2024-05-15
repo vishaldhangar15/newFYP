@@ -27,7 +27,7 @@ const SignUp = () => {
   const handleSubmit = async () => {
     event.preventDefault();
     const res = await registerStudent(setstudentDetails);
-    console.log(res);
+    // console.log(res);
     if (res.status === 200) {
       toast.success(res.message);
     } else {

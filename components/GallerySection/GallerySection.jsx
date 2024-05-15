@@ -9,47 +9,67 @@ const GallerySection = () => {
     {
       id: 1,
       imgsrc:
-        'https://wallpapers.com/images/high/sai-pallavi-focus-photograph-tx1gtexi52z0pp89.webp',
+        'hhttps://res.cloudinary.com/ddtprt8xt/image/upload/v1715738171/hc_a5l8vs.png',
     },
     {
       id: 2,
       imgsrc:
-        'https://wallpapers.com/images/high/sai-pallavi-elegant-earrings-h7fewrnq5hmjpxvz.webp',
+        'https://res.cloudinary.com/ddtprt8xt/image/upload/v1715738177/cricketGround_vn6k2v.png',
     },
     {
       id: 3,
       imgsrc:
-        'https://wallpapers.com/images/high/sai-pallavi-side-view-aepjwid63oxdc1ly.webp',
+        'https://res.cloudinary.com/ddtprt8xt/image/upload/v1715738441/3_m1rnlm.png',
     },
     {
       id: 4,
       imgsrc:
-        'https://wallpapers.com/images/hd/batman-arkham-origins-nsl7ff2rnlsbuau6.webp',
+        'https://res.cloudinary.com/ddtprt8xt/image/upload/v1715742327/9_medpub.jpg',
     },
     {
       id: 5,
       imgsrc:
-        'https://wallpapers.com/images/high/spider-man-aesthetic-0f74grzoj0jjpp7n.webp',
+        'hhttps://res.cloudinary.com/ddtprt8xt/image/upload/v1715742328/8_pqet56.jpg',
     },
     {
       id: 6,
       imgsrc:
-        'https://wallpapers.com/images/high/iron-man-power-gesture-vua70ols5yhwkb49.webp',
+        'https://res.cloudinary.com/ddtprt8xt/image/upload/v1715742328/11_viqaam.jpg',
     },
     {
       id: 7,
       imgsrc:
-        'https://wallpapers.com/images/high/tony-stark-final-moments-7zfav7rz2l5xag7u.webp',
+        'https://res.cloudinary.com/ddtprt8xt/image/upload/v1715742329/7_jtz59w.jpg',
     },
     {
       id: 8,
       imgsrc:
-        'https://wallpapers.com/images/high/spider-man-white-2560-x-1440-avo7w7zonmwtaxtm.webp',
+        'https://res.cloudinary.com/ddtprt8xt/image/upload/v1715742329/10_axesfe.jpg',
     },
     {
       id: 9,
       imgsrc:
-        'https://wallpapers.com/images/high/spider-man-white-3840-x-2160-2wov82jaudol5tgo.webp',
+        'https://res.cloudinary.com/ddtprt8xt/image/upload/v1715742329/6_pczmdt.jpg',
+    },
+    {
+      id: 10,
+      imgsrc:
+        'https://res.cloudinary.com/ddtprt8xt/image/upload/v1715742330/12_tio2tt.jpg',
+    },
+    {
+      id: 11,
+      imgsrc:
+        'https://res.cloudinary.com/ddtprt8xt/image/upload/v1715742331/13_ymqqta.jpg',
+    },
+    {
+      id: 12,
+      imgsrc:
+        'https://res.cloudinary.com/ddtprt8xt/image/upload/v1715742333/16_eqpxzn.jpg',
+    },
+    {
+      id: 13,
+      imgsrc:
+        'https://res.cloudinary.com/ddtprt8xt/image/upload/v1715742725/17_i9frcs.jpg',
     },
   ];
 

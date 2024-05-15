@@ -6,7 +6,7 @@ import clientPromise from '@/lib/connectDB';
 export async function POST(request) {
   try {
     const { from, to, reason } = await request.json();
-    console.log(from, to, reason);
+    // console.log(from, to, reason);
     if (!from || !to) {
       return NextResponse.json({
         message: 'Please fill in all the fields',

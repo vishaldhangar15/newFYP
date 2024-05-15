@@ -22,17 +22,17 @@ const ImageGallery = () => {
     {
       id: 4,
       imgsrc:
-        'https://res.cloudinary.com/ddtprt8xt/image/upload/v1715738441/3_m1rnlm.png',
+        'https://res.cloudinary.com/ddtprt8xt/image/upload/v1715742327/9_medpub.jpg',
     },
     {
       id: 5,
       imgsrc:
-        'https://res.cloudinary.com/ddtprt8xt/image/upload/v1715738441/3_m1rnlm.png',
+        'https://res.cloudinary.com/ddtprt8xt/image/upload/v1715742329/7_jtz59w.jpg',
     },
     {
       id: 6,
       imgsrc:
-        'https://res.cloudinary.com/ddtprt8xt/image/upload/v1715738441/3_m1rnlm.png',
+        'https://res.cloudinary.com/ddtprt8xt/image/upload/v1715742329/6_pczmdt.jpg',
     },
   ];
 

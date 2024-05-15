@@ -49,7 +49,7 @@ const loginStudent = async (data) => {
       success: false,
     };
   } catch (error) {
-    console.log(error.message);
+    // console.log(error.message);
     return {
       status: 400,
       message: result.message,
@@ -82,7 +82,7 @@ const getStudentData = async () => {
       success: false,
     };
   } catch (error) {
-    console.log(error.message);
+    // console.log(error.message);
     return {
       status: 400,
       message: 'Something wen wrong while fetching data',
@@ -92,7 +92,7 @@ const getStudentData = async () => {
 };
 
 const verifyStudentData = (data) => {
-  console.log(data);
+  // console.log(data);
 };
 
 const addComplaint = async (data) => {
@@ -106,7 +106,7 @@ const addComplaint = async (data) => {
       body: JSON.stringify(data),
     });
     const result = await response.json();
-    console.log(result);
+    // console.log(result);
     if (result.status === 200) {
       return {
         status: 200,

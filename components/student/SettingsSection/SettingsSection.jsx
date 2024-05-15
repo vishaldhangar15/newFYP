@@ -25,7 +25,7 @@ import GeneralSection from '../Dashboard/GeneralSection';
 import { useState } from 'react';
 import LogOutSection from '../Dashboard/LogOutSection';
 const SettingsSection = () => {
-  const [active, setActive] = useState('General');
+  const [active, setActive] = useState('LogOut');
 
   const curr = 'grid gap-4 text-sm text-muted-foreground';
   const notActive = '';
@@ -43,7 +43,7 @@ const SettingsSection = () => {
           className="grid gap-4 text-sm text-muted-foreground"
           x-chunk="dashboard-04-chunk-0"
         >
-          <Link
+          {/* <Link
             onClick={() => hadncleActive('General')}
             href="#"
             className={`font-semibold ${
@@ -51,7 +51,7 @@ const SettingsSection = () => {
             }`}
           >
             General
-          </Link>
+          </Link> */}
           <Link
             className={`font-semibold ${
               active === 'LogOut' ? 'text-primary' : ''

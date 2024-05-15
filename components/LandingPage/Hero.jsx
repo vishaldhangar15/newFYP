@@ -29,8 +29,8 @@ const Hero = () => {
         </p>
 
         <div className="space-y-4 md:space-y-0 md:space-x-4">
-          <Link href="/student/signin">
-            <Button className="w-full md:w-1/3">Get Started</Button>
+          <Link href="/about">
+            <Button className="w-full md:w-1/3">About Us</Button>
           </Link>
         </div>
       </div>

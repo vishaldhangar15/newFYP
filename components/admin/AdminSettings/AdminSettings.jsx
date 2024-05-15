@@ -4,7 +4,7 @@ import { useState } from 'react';
 import AdminGeneralSection from './AdminGeneralSection';
 import AdminLogOutSection from './AdminLogOut';
 const AdminSettings = () => {
-  const [active, setActive] = useState('General');
+  const [active, setActive] = useState('LogOut');
   const activeLink = 'font-semibold text-primary';
 
   return (
@@ -18,13 +18,13 @@ const AdminSettings = () => {
             className="grid gap-4 text-sm text-muted-foreground"
             x-chunk="dashboard-04-chunk-0"
           >
-            <Link
+            {/* <Link
               href="#"
               onClick={() => setActive('General')}
               className={active === 'General' ? activeLink : ''}
             >
               General
-            </Link>
+            </Link> */}
             <Link
               onClick={() => setActive('LogOut')}
               href="#"
