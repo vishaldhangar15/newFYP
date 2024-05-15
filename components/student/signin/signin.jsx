@@ -88,11 +88,11 @@ const SignIn = () => {
       </div>
       <div className="hidden bg-muted lg:block">
         <Image
-          src="/placeholder.svg"
+          src="https://res.cloudinary.com/ddtprt8xt/image/upload/v1715752986/login_srpamk.png"
           alt="Image"
           width="1920"
           height="1080"
-          className="h-full w-full object-cover dark:brightness-[0.2] dark:grayscale"
+          className="h-full w-full object-cover dark:brightness-[0.5] "
         />
       </div>
     </div>
