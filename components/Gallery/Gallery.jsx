@@ -7,32 +7,32 @@ const ImageGallery = () => {
     {
       id: 1,
       imgsrc:
-        'https://wallpapers.com/images/high/sai-pallavi-focus-photograph-tx1gtexi52z0pp89.webp',
+        'https://res.cloudinary.com/ddtprt8xt/image/upload/v1715738177/cricketGround_vn6k2v.png',
     },
     {
       id: 2,
       imgsrc:
-        'https://wallpapers.com/images/high/sai-pallavi-elegant-earrings-h7fewrnq5hmjpxvz.webp',
+        'https://res.cloudinary.com/ddtprt8xt/image/upload/v1715738171/hc_a5l8vs.png',
     },
     {
       id: 3,
       imgsrc:
-        'https://wallpapers.com/images/high/sai-pallavi-side-view-aepjwid63oxdc1ly.webp',
+        'https://res.cloudinary.com/ddtprt8xt/image/upload/v1715738441/3_m1rnlm.png',
     },
     {
       id: 4,
       imgsrc:
-        'https://wallpapers.com/images/hd/batman-arkham-origins-nsl7ff2rnlsbuau6.webp',
+        'https://res.cloudinary.com/ddtprt8xt/image/upload/v1715738441/3_m1rnlm.png',
     },
     {
       id: 5,
       imgsrc:
-        'https://wallpapers.com/images/high/spider-man-aesthetic-0f74grzoj0jjpp7n.webp',
+        'https://res.cloudinary.com/ddtprt8xt/image/upload/v1715738441/3_m1rnlm.png',
     },
     {
       id: 6,
       imgsrc:
-        'https://wallpapers.com/images/high/iron-man-power-gesture-vua70ols5yhwkb49.webp',
+        'https://res.cloudinary.com/ddtprt8xt/image/upload/v1715738441/3_m1rnlm.png',
     },
   ];
 
