@@ -14,8 +14,8 @@ const EventCard = ({ data }) => {
   const name = '';
   const student = undefined;
   return (
-    <div className="w-[200px]   shadow-lg rounded-lg overflow-hidden">
-      <div className="text-base text-primary text-left m-4  ">
+    <div className="w-[300px]   m-8    font-normal   shadow-lg rounded-lg overflow-hidden">
+      <div className=" text-foreground font-extrabold text-3xl text-left m-4  ">
         <spaN>{data?.title}</spaN>
       </div>
       <div className="text-base text-foreground text-left m-4  ">

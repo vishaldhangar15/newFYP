@@ -110,6 +110,7 @@ const addEvent = async (data) => {
       body: JSON.stringify(data),
     });
     const result = await response.json();
+
     if (result.status === 200) {
       return {
         status: 200,

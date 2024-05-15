@@ -2,7 +2,7 @@ import clientPromise from '@/lib/connectDB';
 import { NextResponse } from 'next/server';
 export async function POST(request) {
   try {
-    const { from, to, title, venue, others } = await request.json();
+    const { from, to, title, venue, other } = await request.json();
     if (!from || !to || !venue || !title) {
       return NextResponse.json({
         message: 'Please fill in all the fields',
@@ -29,7 +29,7 @@ export async function POST(request) {
       to,
       title,
       venue,
-      others,
+      other,
     });
     return NextResponse.json({
       message: 'Event added successfully',

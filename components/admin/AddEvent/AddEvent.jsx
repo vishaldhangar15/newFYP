@@ -61,7 +61,7 @@ const AddEvent = () => {
       toast.error('End date cannot be less than start date!');
       return;
     }
-
+    console.log(Event);
     const res = await addEvent(Event);
 
     if (res.status === 200) {

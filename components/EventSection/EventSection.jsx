@@ -17,10 +17,16 @@ const EventSection = () => {
       <div className="text-primary text-center text-3xl font-extrabold">
         {' '}
         Event Section
-        <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-4 p-4">
-          {event.map((data) => (
-            <EventCard key={data?._id} data={data} />
-          ))}
+        <div>
+          {event.length > 0 ? (
+            <div className="flex  flex-wrap ">
+              {event.map((data) => (
+                <EventCard key={data?._id} data={data} />
+              ))}
+            </div>
+          ) : (
+            <p className="text-center">No events</p>
+          )}
         </div>
       </div>
     </div>
